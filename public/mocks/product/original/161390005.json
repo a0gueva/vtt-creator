@@ -1,0 +1,102 @@
+{
+    "altText": "Clothing-Tops-Longsleeve Relaxed Photo Graphic Tee Shirt-White",
+    "averageOverallRatings": null,
+    "baseProduct": "16139",
+    "channels": [],
+    "classification": "bottom",
+    "code": "161390005",
+    "colorGroup": "Multi-Color",
+    "colorName": "White - Multi-Color",
+    "comingSoon": false,
+    "crossSellProductUrl": null,
+    "crossSellSizeGroup": null,
+    "customizable": false,
+    "flxCustomization": false,
+    "availableForPickup": false,
+    "department": "Clothing",
+    "pdpGroupId": "16139",
+    "returnable": true,
+    "customizationType": "",
+    "description": "<UL> <LI> A timeless long-sleeve T-shirt </LI><LI> Made with a casual, relaxed fit </LI><LI> Finished with a bold graphic </LI><LI> Crewneck </LI> </UL>",
+    "findInStoreEligible": false,
+    "galleryImagelist": null,
+    "images": [
+        {
+            "altText": "Longsleeve Relaxed Photo Graphic Tee Shirt",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 0,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/161390005-front-pdp?$qv_desktop_full$"
+        },
+        {
+            "altText": "Longsleeve Relaxed Photo Graphic Tee Shirt",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 1,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/161390005-back-pdp?$qv_desktop_full$"
+        },
+        {
+            "altText": "Longsleeve Relaxed Photo Graphic Tee Shirt",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 3,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/161390005-back-pdp?$qv_desktop_full$"
+        },
+        {
+            "altText": "Longsleeve Relaxed Photo Graphic Tee Shirt",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 4,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/161390005-front-pdp?$qv_desktop_full$"
+        }
+    ],
+    "itemType": "TShirts",
+    "maxOrderQuantity": 6,
+    "merchantBadge": null,
+    "minOrderQuantity": 1,
+    "multidimensional": true,
+    "name": "Longsleeve Relaxed Photo Graphic Tee Shirt",
+    "noOfRatings": null,
+    "pdpCmsContentId1": null,
+    "pdpCmsContentId2": null,
+    "preferredCategory": "levi_clothing_men_sale_shirts_us",
+    "price": {
+        "code": null,
+        "currencyIso": "USD",
+        "formattedValue": "$25.98",
+        "hardPrice": 25.98,
+        "hardPriceFormattedValue": "$25.98",
+        "maxQuantity": null,
+        "minQuantity": null,
+        "priceType": "BUY",
+        "regularPrice": 29.5,
+        "regularPriceFormattedValue": "$29.50",
+        "softPrice": null,
+        "softPriceFormattedValue": null,
+        "value": 25.98
+    },
+    "promotionalBadge": null,
+    "purchasable": true,
+    "seoMetaData": {
+        "metaDescription": "<ul> <li> a timeless long-sleeve t-shirt </li><li> made with a casual, relaxed fit </li><li> finished with a bold graphic </li><li> crewneck </li> </ul> buy at Levi'...",
+        "metaH1": "Longsleeve Relaxed Photo Graphic Tee Shirt",
+        "metaTitle": "Longsleeve Relaxed Photo Graphic Tee Shirt - Multi-color | Levi's® US",
+        "robots": "index,follow"
+    },
+    "sizeGuide": "men-sizecharts-tops",
+    "soldIndividually": true,
+    "soldOutForever": false,
+    "summary": "",
+    "url": "/apparel/clothing/tops/longsleeve-relaxed-photo-graphic-tee-shirt/p/161390005",
+    "variantLength": null,
+    "variantSize": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL"
+    ],
+    "variantType": "PC13Product",
+    "variantWaist": null
+}

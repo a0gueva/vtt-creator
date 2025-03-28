@@ -1,0 +1,124 @@
+{
+    "data": {
+        "product": {
+            "altText": "Women-Skinny-721 High Rise Skinny Women's Jeans-Harlem Knockout",
+            "averageOverallRatings": 4.3022,
+            "baseProduct": "18882",
+            "channels": [],
+            "classifications": null,
+            "classification": "bottom",
+            "code": "188820445",
+            "colorGroup": "Medium Wash",
+            "colorName": "Harlem Knockout - Medium Wash",
+            "comingSoon": false,
+            "crossSellProductUrl": null,
+            "crossSellSizeGroup": null,
+            "customizable": false,
+            "flxCustomization": false,
+            "availableForPickup": false,
+            "department": "Women",
+            "pdpGroupId": "18882",
+            "returnable": true,
+            "customizationType": "",
+            "description": "<p>Fact: high-rise jeans make everyone look good. Those extra few inches create waist-emphasizing magic. Now it's your turn to learn why we call the 721 High-Rise Skinny 'the ultimate waist-defining fit.'</p><UL> <LI> The ultimate waist-defining fit </LI><LI> A 10-inch rise that's designed to flatter, hold and lift </LI><LI> Sleek skinny leg </LI><LI> Destructed finish </LI><LI> Features Levi's® Sculpt with Hypersoft: super-soft for enhanced comfort with supportive stretch </LI> </UL>",
+            "findInStoreEligible": false,
+            "lscoBreadcrumbs": [
+                {
+                    "categoryCode": "levi_clothing",
+                    "name": "Clothing",
+                    "url": "/clothing/c/levi_clothing"
+                },
+                {
+                    "categoryCode": "levi_clothing_women",
+                    "name": "Women",
+                    "url": "/clothing/women/c/levi_clothing_women"
+                },
+                {
+                    "categoryCode": "levi_clothing_women_jeans",
+                    "name": "Jeans",
+                    "url": "/clothing/women/jeans/c/levi_clothing_women_jeans"
+                },
+                {
+                    "categoryCode": "levi_clothing_women_jeans_skinny",
+                    "name": "Skinny",
+                    "url": "/clothing/women/jeans/skinny/c/levi_clothing_women_jeans_skinny"
+                },
+                {
+                    "categoryCode": null,
+                    "name": "721 High Rise Skinny Women's Jeans",
+                    "url": "/clothing/women/jeans/skinny/721-high-rise-skinny-womens-jeans/p/188820445"
+                }
+            ],
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": "721 High Rise Skinny Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 0,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/188820445-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "721 High Rise Skinny Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 1,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/188820445-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "721 High Rise Skinny Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/188820445-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "721 High Rise Skinny Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/188820445-front-pdp?$qv_desktop_bottoms$"
+                    }
+                ]
+            },
+            "itemType": "Jeans",
+            "maxOrderQuantity": 6,
+            "merchantBadge": null,
+            "minOrderQuantity": 1,
+            "multidimensional": true,
+            "name": "721 High Rise Skinny Women's Jeans",
+            "noOfRatings": 225,
+            "pdpCmsContentId1": null,
+            "pdpCmsContentId2": null,
+            "preferredCategory": null,
+            "price": {
+                "code": null,
+                "currencyIso": "USD",
+                "formattedValue": "$49.99",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 69.5,
+                "regularPriceFormattedValue": "$69.50",
+                "softPrice": 49.99,
+                "softPriceFormattedValue": "$49.99",
+                "value": 49.99
+            },
+            "promotionalBadge": null,
+            "purchasable": true,
+            "seoMetaData": {
+                "metaDescription": "<p>fact: high-rise jeans make everyone look good. Those extra few inches create waist-emphasizing magic. Now it's your turn to learn why we call the 721 high-rise sk...",
+                "metaH1": "721 High Rise Skinny Women's Jeans",
+                "metaTitle": "721 High Rise Skinny Women's Jeans - Medium Wash | Levi's® US",
+                "robots": "index,follow"
+            },
+            "sizeGuide": "women-sizecharts-bottoms",
+            "soldIndividually": true,
+            "soldOutForever": false,
+            "summary": "",
+            "url": "/clothing/women/jeans/skinny/721-high-rise-skinny-womens-jeans/p/188820445"
+        }
+    }
+}

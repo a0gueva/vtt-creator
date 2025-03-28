@@ -1,0 +1,146 @@
+{
+    "altText": "Men-Jeans-551™ Z Authentic Straight Men's Jeans-Swim Shad",
+    "averageOverallRatings": 3.5,
+    "baseProduct": "24767",
+    "channels": [],
+    "classifications": null,
+    "classification": "bottom",
+    "code": "247670002",
+    "colorGroup": "Black",
+    "colorName": "Swim Shad - Black",
+    "comingSoon": false,
+    "crossSellProductUrl": null,
+    "crossSellSizeGroup": null,
+    "customizable": false,
+    "flxCustomization": false,
+    "availableForPickup": false,
+    "department": "Men",
+    "pdpGroupId": "24767",
+    "returnable": true,
+    "customizationType": "",
+    "description": "<p>This pair of Levi's® Made & Crafted® 551™ Z Authentic Straight Jeans pays tribute to our first-ever pre-shrunk jeans. True to the original, it features stitches one inch away from the seams and a wider J-stitch at the fly. Stacking at the hem and a distinct “anti-fit” — a slightly looser cut that stands in opposition to slimmer and skinnier styles in the seat — make these vintage-inspired jeans the perfect pair for the skatepark. We crafted this pair from a soft cotton-hemp blend that's been artfully finished to a lived-in black wash.</p><UL> <LI> Inspired by our first-ever pre-shrunk jeans: the 551™ Z </LI><LI> True to the original, it features unique stitching details </LI><LI> Designed to be worn stacked at the hem </LI><LI> A slightly looser cut in the seat </LI><LI> Wider stitching at the fly </LI> </UL>",
+    "findInStoreEligible": false,
+    "images": [
+        {
+            "altText": "551™ Z Authentic Straight Men's Jeans",
+            "format": "OnModelWaistdownFront",
+            "galleryIndex": 0,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/247670002-front-pdp?$grid_desktop_bottoms$"
+        },
+        {
+            "altText": "551™ Z Authentic Straight Men's Jeans",
+            "format": "OnModelWaistdownSide",
+            "galleryIndex": 1,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/247670002-front-pdp?$grid_desktop_bottoms$"
+        },
+        {
+            "altText": "551™ Z Authentic Straight Men's Jeans",
+            "format": "OnModelWaistdownBack",
+            "galleryIndex": 2,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/247670002-front-pdp?$grid_desktop_bottoms$"
+        },
+        {
+            "altText": "551™ Z Authentic Straight Men's Jeans",
+            "format": "OnModelDynamic",
+            "galleryIndex": 3,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/247670002-front-pdp?$grid_desktop_bottoms$"
+        }
+    ],
+    "itemType": "Jeans",
+    "maxOrderQuantity": 6,
+    "merchantBadge": "Levi's® Premium",
+    "minOrderQuantity": 1,
+    "multidimensional": true,
+    "name": "551™ Z Authentic Straight Men's Jeans",
+    "noOfRatings": 2,
+    "pdpCmsContentId1": null,
+    "pdpCmsContentId2": null,
+    "preferredCategory": "levi_jeans_by_fit_number_men_jeans_551",
+    "price": {
+        "code": null,
+        "currencyIso": "USD",
+        "formattedValue": "$98.00",
+        "hardPrice": null,
+        "hardPriceFormattedValue": null,
+        "maxQuantity": null,
+        "minQuantity": null,
+        "priceType": "BUY",
+        "regularPrice": 98,
+        "regularPriceFormattedValue": "$98.00",
+        "softPrice": null,
+        "softPriceFormattedValue": null,
+        "value": 98
+    },
+    "productSchemaOrgMarkup": {
+        "aggregateRating": {
+            "entry": [
+                {
+                    "key": "@type",
+                    "value": "AggregateRating"
+                },
+                {
+                    "key": "ratingValue",
+                    "value": "3.5"
+                },
+                {
+                    "key": "reviewCount",
+                    "value": "2"
+                }
+            ]
+        },
+        "brand": {
+            "entry": [
+                {
+                    "key": "@type",
+                    "value": "Thing"
+                },
+                {
+                    "key": "name",
+                    "value": "Levi"
+                }
+            ]
+        },
+        "gtin12": "00194877045070",
+        "offers": {
+            "entry": [
+                {
+                    "key": "@type",
+                    "value": "Offer"
+                },
+                {
+                    "key": "url",
+                    "value": "https://www.levi.com/US/en_US/clothing/men/jeans/551-z-authentic-straight-mens-jeans/p/247670002"
+                },
+                {
+                    "key": "priceCurrency",
+                    "value": "USD"
+                },
+                {
+                    "key": "price",
+                    "value": "98.0"
+                },
+                {
+                    "key": "availability",
+                    "value": "https://schema.org/InStock"
+                }
+            ]
+        }
+    },
+    "promotionalBadge": null,
+    "purchasable": true,
+    "seoMetaData": {
+        "metaDescription": "<p>this pair of levi's® made & crafted® 551™ z authentic straight jeans pays tribute to our first-ever pre-shrunk jeans. True to the original, it features stitches o...",
+        "metaH1": "551™ Z Authentic Straight Men's Jeans",
+        "metaTitle": "551™ Z Authentic Straight Men's Jeans - Black | Levi's® US",
+        "robots": "index,follow"
+    },
+    "sizeGuide": "men-sizecharts-bottoms",
+    "soldIndividually": true,
+    "soldOutForever": false,
+    "summary": "",
+    "url": "/clothing/men/jeans/551-z-authentic-straight-mens-jeans/p/247670002"
+}

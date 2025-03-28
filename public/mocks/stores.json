@@ -1,0 +1,92 @@
+{
+    "data": {
+        "storeDirectory": {
+            "storeFinderData": [
+                {
+                    "addLine1": "CC Belle Epine Niveau haut",
+                    "addLine2": null,
+                    "city": "Thiais",
+                    "country": "FR",
+                    "departments": [
+                        "MEN"
+                    ],
+                    "distance": 0,
+                    "hrsOfOperation": [
+                        {
+                            "daysShort": "lun-vie",
+                            "hours": "Closed",
+                            "isOpen": false
+                        },
+                        {
+                            "daysShort": "sáb",
+                            "hours": "Closed",
+                            "isOpen": false
+                        },
+                        {
+                            "daysShort": "dom",
+                            "hours": "Closed",
+                            "isOpen": false
+                        }
+                    ],
+                    "latitude": 48.756559,
+                    "longitude": 2.371253,
+                    "mapUrl": null,
+                    "phone": "+33 1 46 87 11 04",
+                    "postcode": "94320",
+                    "state": null,
+                    "storeId": "8797789128696",
+                    "storeName": "Dockers® Thiais",
+                    "storeType": "STORE",
+                    "todaysHrsOfOperation": {
+                        "daysShort": "jue",
+                        "hours": "Closed",
+                        "isOpen": false
+                    },
+                    "uom": null
+                },
+                {
+                    "addLine1": "CC Rosny 2",
+                    "addLine2": null,
+                    "city": "Rosny Sous Bois",
+                    "country": "FR",
+                    "departments": [
+                        "MEN"
+                    ],
+                    "distance": 0,
+                    "hrsOfOperation": [
+                        {
+                            "daysShort": "lun-vie",
+                            "hours": "Closed",
+                            "isOpen": false
+                        },
+                        {
+                            "daysShort": "sáb",
+                            "hours": "Closed",
+                            "isOpen": false
+                        },
+                        {
+                            "daysShort": "dom",
+                            "hours": "Closed",
+                            "isOpen": false
+                        }
+                    ],
+                    "latitude": 48.883378,
+                    "longitude": 2.477851,
+                    "mapUrl": null,
+                    "phone": "+33 1 45 28 81 24 ",
+                    "postcode": "93110",
+                    "state": null,
+                    "storeId": "8797791160312",
+                    "storeName": "Dockers® Rosny 2",
+                    "storeType": "STORE",
+                    "todaysHrsOfOperation": {
+                        "daysShort": "jue",
+                        "hours": "Closed",
+                        "isOpen": false
+                    },
+                    "uom": null
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,99 @@
+{
+    "altText": "Clothing-Tops-Fillmore Short Puffer Jacket-Harvest Gold",
+    "averageOverallRatings": 5,
+    "baseProduct": "27732",
+    "code": "277320003",
+    "colorGroup": "Multi-Color",
+    "colorName": "Harvest Gold - Multi-Color",
+    "comingSoon": false,
+    "crossSellProductUrl": null,
+    "crossSellSizeGroup": null,
+    "customizable": false,
+    "flxCustomization": false,
+    "availableForPickup": false,
+    "department": "Clothing",
+    "pdpGroupId": "27732",
+    "returnable": true,
+    "customizationType": "",
+    "description": "<p>This not-so-basic puffer jacket is an ideal outer layer. With its classic versatile style that's easy to dress up or down and its water-repellant exterior that's perfect for drizzly days, you could call it an essential.</p><UL> <LI> A not-so-basic puffer jacket that makes a great layering piece </LI><LI> Complete with a water-repellant exterior </LI><LI> Features the Levi's® sportswear logo on chest </LI> </UL>",
+    "findInStoreEligible": false,
+    "galleryImageList": null,
+    "images": [
+        {
+            "altText": "Fillmore Short Puffer Jacket",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 0,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/277320003-front-pdp?$qv_desktop_full$"
+        },
+        {
+            "altText": "Fillmore Short Puffer Jacket",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 1,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/277320003-front-pdp?$qv_desktop_full$"
+        },
+        {
+            "altText": "Fillmore Short Puffer Jacket",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 2,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/277320003-front-pdp?$qv_desktop_full$"
+        },
+        {
+            "altText": "Fillmore Short Puffer Jacket",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 4,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/277320003-front-pdp?$qv_desktop_full$"
+        }
+    ],
+    "itemType": "Jackets",
+    "maxOrderQuantity": 6,
+    "merchantBadge": null,
+    "minOrderQuantity": 1,
+    "multidimensional": true,
+    "name": "Fillmore Short Puffer Jacket",
+    "noOfRatings": 2,
+    "pdpCmsContentId1": null,
+    "pdpCmsContentId2": null,
+    "preferredCategory": "levi_clothing_men_sale_jackets_us",
+    "price": {
+        "code": null,
+        "currencyIso": "USD",
+        "formattedValue": "$125.98",
+        "hardPrice": 125.98,
+        "hardPriceFormattedValue": "$125.98",
+        "maxQuantity": null,
+        "minQuantity": null,
+        "priceType": "BUY",
+        "regularPrice": 198,
+        "regularPriceFormattedValue": "$198.00",
+        "softPrice": null,
+        "softPriceFormattedValue": null,
+        "value": 125.98
+    },
+    "promotionalBadge": null,
+    "purchasable": true,
+    "seoMetaData": {
+        "metaDescription": "<p>this not-so-basic puffer jacket is an ideal outer layer. With its classic versatile style that's easy to dress up or down and its water-repellant exterior that's ...",
+        "metaH1": "Fillmore Short Puffer Jacket",
+        "metaTitle": "Fillmore Short Puffer Jacket - Multi-color | Levi's® US",
+        "robots": "index,follow"
+    },
+    "sizeGuide": "men-sizecharts-tops",
+    "soldIndividually": true,
+    "soldOutForever": false,
+    "summary": "",
+    "url": "/apparel/clothing/tops/fillmore-short-puffer-jacket/p/277320003",
+    "variantLength": null,
+    "variantSize": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+    ],
+    "variantType": "PC13Product",
+    "variantWaist": null
+}

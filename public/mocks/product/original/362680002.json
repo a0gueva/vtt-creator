@@ -1,0 +1,91 @@
+{
+    "altText": "Men-Shirts-Oversize Tactical Shirt-Caviar",
+    "averageOverallRatings": null,
+    "baseProduct": "36268",
+    "channels": [],
+    "classifications": null,
+    "classification": "top",
+    "code": "362680002",
+    "colorGroup": "Black",
+    "colorName": "Caviar - Black",
+    "comingSoon": false,
+    "crossSellProductUrl": null,
+    "crossSellSizeGroup": null,
+    "customizable": false,
+    "flxCustomization": false,
+    "availableForPickup": false,
+    "department": "Men",
+    "pdpGroupId": "36268",
+    "returnable": true,
+    "customizationType": "",
+    "description": "<p>Tactical wear is having a moment. A big one. We put our own twist on the essential tactical shirt with an unapologetically oversized fit. The end result: an on-trend, off-kilter piece that strikes the perfect balance between style and utility.</p>\n\n<ul>\n\t<li>A modern riff on the tactical shirt</li>\n\t<li>Designed with a bold, oversized fit</li>\n</ul>\n",
+    "findInStoreEligible": false,
+    "images": [
+            {
+                "altText": "Oversize Tactical Shirt",
+                "format": "Quickview_Desktop",
+                "galleryIndex": 0,
+                "imageType": "GALLERY",
+                "url": "https://lsco.scene7.com/is/image/lsco/362680002-dynamic1-pdp?$qv_desktop_full$"
+            },
+            {
+                "altText": "Oversize Tactical Shirt",
+                "format": "Quickview_Desktop",
+                "galleryIndex": 1,
+                "imageType": "GALLERY",
+                "url": "https://lsco.scene7.com/is/image/lsco/362680002-front-pdp?$qv_desktop_full$"
+            },
+            {
+                "altText": "Oversize Tactical Shirt",
+                "format": "Quickview_Desktop",
+                "galleryIndex": 2,
+                "imageType": "GALLERY",
+                "url": "https://lsco.scene7.com/is/image/lsco/362680002-front-pdp?$qv_desktop_full$"
+            },
+            {
+                "altText": "Oversize Tactical Shirt",
+                "format": "Quickview_Desktop",
+                "galleryIndex": 3,
+                "imageType": "GALLERY",
+                "url": "https://lsco.scene7.com/is/image/lsco/362680002-front-pdp?$qv_desktop_full$"
+            }
+        ],
+    "itemType": "Shirts",
+    "maxOrderQuantity": 6,
+    "merchantBadge": null,
+    "minOrderQuantity": 1,
+    "multidimensional": true,
+    "name": "Oversize Tactical Shirt",
+    "noOfRatings": null,
+    "pdpCmsContentId1": null,
+    "pdpCmsContentId2": null,
+    "promotionalBadge": null,
+    "purchasable": true,
+    "seoMetaData": {
+        "metaDescription": "<p>tactical wear is having a moment. A big one. We put our own twist on the essential tactical shirt with an unapologetically oversized fit. The end result: an on-tr...",
+        "metaH1": "Oversize Tactical Shirt",
+        "metaTitle": "Oversize Tactical Shirt - Black | Levi's® US",
+        "robots": "index,follow"
+    },
+    "price": {
+        "code": null,
+        "currencyIso": "USD",
+        "formattedValue": "$98.00",
+        "hardPrice": null,
+        "hardPriceFormattedValue": null,
+        "maxQuantity": null,
+        "minQuantity": null,
+        "priceType": "BUY",
+        "regularPrice": 98,
+        "regularPriceFormattedValue": "$98.00",
+        "softPrice": null,
+        "softPriceFormattedValue": null,
+        "value": 98
+    },
+    "sizeGuide": "men-sizecharts-tops",
+    "soldIndividually": true,
+    "soldOutForever": false,
+    "summary": "",
+    "url": "/clothing/men/shirts/oversize-tactical-shirt/p/362680002",
+    "variantLength": null
+}

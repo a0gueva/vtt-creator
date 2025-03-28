@@ -1,0 +1,97 @@
+{
+    "data": {
+        "product": {
+            "altText": "Women-Shirts, Blouses & Tops-Hannah Wrap Top-Kumquat",
+            "averageOverallRatings": null,
+            "baseProduct": "19754",
+            "channels": [],
+            "classifications": null,
+            "classification": "top",
+            "code": "197540002",
+            "colorGroup": "Orange",
+            "colorName": "Kumquat - Orange",
+            "comingSoon": false,
+            "crossSellProductUrl": null,
+            "crossSellSizeGroup": null,
+            "customizable": false,
+            "flxCustomization": false,
+            "availableForPickup": false,
+            "department": "Women",
+            "pdpGroupId": "19754",
+            "returnable": true,
+            "customizationType": "",
+            "description": "<UL> <LI> A feminine wrap top </LI><LI> Flirty V-neckline </LI><LI> Soft ribbed knit </LI> </UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": "Hannah Wrap Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 0,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/197540002-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Hannah Wrap Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 1,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/197540002-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Hannah Wrap Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/197540002-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Hannah Wrap Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 3,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/197540002-front-pdp?$qv_desktop_full$"
+                    }
+                ]
+            },
+            "itemType": "TShirts",
+            "maxOrderQuantity": 6,
+            "merchantBadge": null,
+            "minOrderQuantity": 1,
+            "multidimensional": true,
+            "name": "Hannah Wrap Top",
+            "noOfRatings": null,
+            "pdpCmsContentId1": null,
+            "pdpCmsContentId2": null,
+            "preferredCategory": null,
+            "price": {
+                "code": null,
+                "currencyIso": "USD",
+                "formattedValue": "$19.99",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 29.5,
+                "regularPriceFormattedValue": "$29.50",
+                "softPrice": 19.99,
+                "softPriceFormattedValue": "$19.99",
+                "value": 19.99
+            },
+            "promotionalBadge": null,
+            "purchasable": true,
+            "seoMetaData": {
+                "metaDescription": "<ul> <li> a feminine wrap top </li><li> flirty v-neckline </li><li> soft ribbed knit </li> </ul> buy at Levi's® US.",
+                "metaH1": "Hannah Wrap Top",
+                "metaTitle": "Hannah Wrap Top - Orange | Levi's® US",
+                "robots": "index,follow"
+            },
+            "sizeGuide": "women-sizecharts-tops",
+            "soldIndividually": true,
+            "soldOutForever": false,
+            "summary": "",
+            "url": "/clothing/women/shirts-blouses-tops/hannah-wrap-top/p/197540002"
+        }
+    }
+}

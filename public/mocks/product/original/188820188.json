@@ -1,0 +1,83 @@
+{
+    "altText": null,
+    "averageOverallRatings": 4.1429,
+    "baseProduct": "18882",
+    "classifications": null,
+    "code": "188820188",
+    "classification": "bottom",
+    "colorGroup": "Blue",
+    "colorName": "To The Nine",
+    "customizable": false,
+    "description": "<ul> <li> Flatters your waist and holds you in</li> <li> The ultimate waist-defining fit</li> <li> Levi's® sculpt fabrication with soft is a delicate blend of ultra-soft fibers and powerful stretch</li> <li> Iconic leather patch at back waist</LI><LI>We partner with the Better Cotton Initiative to improve cotton farming globally</LI></UL>",
+    "findInStoreEligible": false,
+    "galleryImageList": null,
+    "images": [
+        {
+            "altText": null,
+            "format": "Backoffice",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/188820188-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Mobile",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/188820188-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Tablet",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/188820188-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Desktop",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/188820188-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        }
+    ],
+    "itemType": null,
+    "maxOrderQuantity": null,
+    "merchantBadge": null,
+    "minOrderQuantity": null,
+    "multidimensional": null,
+    "name": "721™ High-Waisted Skinny Jeans",
+    "noOfRatings": 42,
+    "potentialPromotions": null,
+    "price": {
+        "code": null,
+        "currencyIso": "EUR",
+        "formattedValue": "$100.00",
+        "hardPrice": null,
+        "hardPriceFormattedValue": null,
+        "maxQuantity": null,
+        "minQuantity": null,
+        "priceType": "BUY",
+        "regularPrice": 100,
+        "regularPriceFormattedValue": "$100.00",
+        "softPrice": null,
+        "softPriceFormattedValue": null,
+        "value": 100,
+        "__typename": "priceData"
+    },
+    "promotionalBadge": null,
+    "purchasable": null,
+    "sizeGuide": null,
+    "soldIndividually": false,
+    "soldOutForever": false,
+    "summary": null,
+    "url": "/clothing/women/721-high-waisted-skinny-jeans/p/188820188",
+    "variantOptions": null,
+    "variantType": null,
+    "errors": null,
+    "__typename": "product"
+}

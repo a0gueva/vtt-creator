@@ -1,0 +1,87 @@
+{
+    "data": {
+        "product": {
+            "altText": null,
+            "averageOverallRatings": 5,
+            "baseProduct": "18881",
+            "classifications": null,
+            "classification": "bottom",
+            "code": "188810052",
+            "colorGroup": "Black",
+            "colorName": "Black Sheep",
+            "customizable": false,
+            "description": "<ul> <li> Designed to flatter, hold and lift</li> <li> The ultimate look-amazing jeans</li> <li> Iconic leather patch at back waist</LI><LI>We partner with the Better Cotton Initiative to improve cotton farming globally</LI></UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+            "galleryImage": [
+                {
+                    "altText": null,
+                    "format": "Backoffice",
+                    "galleryIndex": null,
+                    "imageType": "PRIMARY",
+                    "url": "https://lsco.scene7.com/is/image/lsco/188810052-front-pdp?$grid_desktop_bottoms$",
+                    "__typename": "genericImage"
+                },
+                {
+                    "altText": null,
+                    "format": "Grid_Mobile",
+                    "galleryIndex": null,
+                    "imageType": "PRIMARY",
+                    "url": "https://lsco.scene7.com/is/image/lsco/188810052-front-pdp?$grid_desktop_bottoms$",
+                    "__typename": "genericImage"
+                },
+                {
+                    "altText": null,
+                    "format": "Grid_Tablet",
+                    "galleryIndex": null,
+                    "imageType": "PRIMARY",
+                    "url": "https://lsco.scene7.com/is/image/lsco/188810052-front-pdp?$grid_desktop_bottoms$",
+                    "__typename": "genericImage"
+                },
+                {
+                    "altText": null,
+                    "format": "Grid_Desktop",
+                    "galleryIndex": null,
+                    "imageType": "PRIMARY",
+                    "url": "https://lsco.scene7.com/is/image/lsco/188810052-front-pdp?$grid_desktop_bottoms$",
+                    "__typename": "genericImage"
+                }
+            ]},
+            "itemType": null,
+            "maxOrderQuantity": null,
+            "merchantBadge": "Water&ltLess®",
+            "minOrderQuantity": null,
+            "multidimensional": null,
+            "name": "711™ Skinny Jeans",
+            "noOfRatings": 1,
+            "potentialPromotions": null,
+            "price": {
+                "code": null,
+                "currencyIso": "EUR",
+                "formattedValue": "$100.00",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 100,
+                "regularPriceFormattedValue": "$100.00",
+                "softPrice": null,
+                "softPriceFormattedValue": null,
+                "value": 100,
+                "__typename": "priceData"
+            },
+            "promotionalBadge": null,
+            "purchasable": null,
+            "sizeGuide": null,
+            "soldIndividually": false,
+            "soldOutForever": false,
+            "summary": null,
+            "url": "/clothing/women/jeans/711-skinny-jeans/p/188810052",
+            "variantOptions": null,
+            "variantType": null,
+            "errors": null,
+            "__typename": "product"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "commerce": [
+        {
+          "row" : 2,
+          "cols" : 2
+        }
+    ],
+    "content": [
+        {
+            "row": 1,
+            "pos": "left",
+            "cols" : 2,
+            "content": {
+                "type": "image",
+                "url": "https://images.contentstack.io/v3/assets/blt2d702d64bab5cd4d/blt04212de7f2aedc90/5e3030fbe147ae4537d92d1f/sh_50193_chino.jpg?width=1030&format=pjpg&quality=90",
+                "msg": "The 501® '93 STRAIGHT JEANS",
+                "component": "CommerceTwoCol"
+            }
+        },
+        {
+            "row": 2,
+            "pos": "fill",
+            "cols" : 3,
+            "content": {
+                "type": "image",
+                "url": "https://images.contentstack.io/v3/assets/bltaee5e377dbff856c/blt21254d50d7320f85/5ed7e2aa444d25730a19dddc/20_H2_SSS_DGTL_3CORE_W4HER_LP_16-9_721.jpg?disable=upscale&width=1500&format=pjpg&quality=90",
+                "msg": "The 501® '93 STRAIGHT JEANS",
+                "component": "CommerceFillRow"
+            }
+        },
+        {
+            "row": 4,
+            "pos": "right",
+            "cols" : 2,
+            "content": {
+                "type": "video",
+                "url": "https://assets.contentstack.io/v3/assets/blt5a5988820e5f83f8/blt359af4b8756a1a19/5fd00ab47c43e43bf4195e72/H1_21_PKMN_HP_D_Desktop.mp4",
+                "msg": "The 501® '93 STRAIGHT JEANS",
+                "component": "CommerceTwoCol"
+            }
+        }
+        
+    ]
+}

@@ -1,0 +1,97 @@
+{
+    "data": {
+        "product": {
+            "altText": "Women-Shirts, Blouses & Tops-Hadley Puff Sleeve Top-Paisley Jacobian Navy Peony",
+            "averageOverallRatings": null,
+            "baseProduct": "28788",
+            "channels": [],
+            "classifications": null,
+            "classification": "top",
+            "code": "287880003",
+            "colorGroup": "Blue",
+            "colorName": "Paisley Jacobian Navy Peony - Blue",
+            "comingSoon": false,
+            "crossSellProductUrl": null,
+            "crossSellSizeGroup": null,
+            "customizable": false,
+            "flxCustomization": false,
+            "availableForPickup": false,
+            "department": "Women",
+            "pdpGroupId": "28788",
+            "returnable": true,
+            "customizationType": "",
+            "description": "<p>You'll love all the feminine touches of this pretty prairie-inspired blouse. Features dainty buttons, ever-so-slightly puffed sleeves and intricate pleated accents.</p><UL> <LI> Feminine prairie-inspired top </LI><LI> Dainty buttons </LI><LI> Slight volume at the sleeves </LI><LI> Pleated detailing </LI> </UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": "Hadley Puff Sleeve Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 0,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/287880003-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Hadley Puff Sleeve Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 1,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/287880003-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Hadley Puff Sleeve Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/287880003-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Hadley Puff Sleeve Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 3,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/287880003-front-pdp?$qv_desktop_full$"
+                    }
+                ]
+            },
+            "itemType": "Shirts",
+            "maxOrderQuantity": 6,
+            "merchantBadge": null,
+            "minOrderQuantity": 1,
+            "multidimensional": true,
+            "name": "Hadley Puff Sleeve Top",
+            "noOfRatings": null,
+            "pdpCmsContentId1": null,
+            "pdpCmsContentId2": null,
+            "preferredCategory": null,
+            "price": {
+                "code": null,
+                "currencyIso": "USD",
+                "formattedValue": "$79.50",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 79.5,
+                "regularPriceFormattedValue": "$79.50",
+                "softPrice": null,
+                "softPriceFormattedValue": null,
+                "value": 79.5
+            },
+            "promotionalBadge": null,
+            "purchasable": true,
+            "seoMetaData": {
+                "metaDescription": "<p>you'll love all the feminine touches of this pretty prairie-inspired blouse. Features dainty buttons, ever-so-slightly puffed sleeves and intricate pleated accent...",
+                "metaH1": "Hadley Puff Sleeve Top",
+                "metaTitle": "Hadley Puff Sleeve Top - Blue | Levi's® US",
+                "robots": "index,follow"
+            },
+            "sizeGuide": "women-sizecharts-tops",
+            "soldIndividually": true,
+            "soldOutForever": false,
+            "summary": "",
+            "url": "/clothing/women/shirts-blouses-tops/hadley-puff-sleeve-top/p/287880003"
+        }
+    }
+}

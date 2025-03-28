@@ -1,0 +1,97 @@
+{
+    "data": {
+        "product": {
+            "altText": "Women-Women-Ribcage Women's Skirt-Washed Noir Black",
+            "averageOverallRatings": null,
+            "baseProduct": "27889",
+            "channels": [],
+            "classification": "bottom",
+            "classifications": null,
+            "code": "278890002",
+            "colorGroup": "Light Wash",
+            "colorName": "Washed Noir Black - Light Wash",
+            "comingSoon": false,
+            "crossSellProductUrl": null,
+            "crossSellSizeGroup": null,
+            "customizable": false,
+            "flxCustomization": false,
+            "availableForPickup": false,
+            "department": "Women",
+            "pdpGroupId": "27889",
+            "returnable": true,
+            "customizationType": "",
+            "description": "<p>Levi's® highest high rise, reimagined as a versatile denim skirt. It has become a hip-slimming and waist-defining obsession.</p><UL> <LI> Classic denim skirt </LI><LI> Made with a super high rise to help define your waist </LI><LI> Sustainably made with TENCEL™ fabric </LI> </UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": "Ribcage Women's Skirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 0,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/278890002-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "Ribcage Women's Skirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 1,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/278890002-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "Ribcage Women's Skirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/278890002-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "Ribcage Women's Skirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 3,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/278890002-front-pdp?$qv_desktop_bottoms$"
+                    }
+                ]
+            },
+            "itemType": "Skirts",
+            "maxOrderQuantity": 6,
+            "merchantBadge": "Levi's® Premium",
+            "minOrderQuantity": 1,
+            "multidimensional": true,
+            "name": "Ribcage Women's Skirt",
+            "noOfRatings": null,
+            "pdpCmsContentId1": null,
+            "pdpCmsContentId2": null,
+            "preferredCategory": null,
+            "price": {
+                "code": null,
+                "currencyIso": "USD",
+                "formattedValue": "$79.50",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 79.5,
+                "regularPriceFormattedValue": "$79.50",
+                "softPrice": null,
+                "softPriceFormattedValue": null,
+                "value": 79.5
+            },
+            "promotionalBadge": "30% off Applied at Checkout",
+            "purchasable": true,
+            "seoMetaData": {
+                "metaDescription": "<p>levi's® highest high rise, reimagined as a versatile denim skirt. It has become a hip-slimming and waist-defining obsession.</p><ul> <li> classic denim skirt </li...",
+                "metaH1": "Ribcage Women's Skirt",
+                "metaTitle": "Ribcage Women's Skirt - Light Wash | Levi's® US",
+                "robots": "index,follow"
+            },
+            "sizeGuide": "women-sizecharts-bottoms",
+            "soldIndividually": true,
+            "soldOutForever": false,
+            "summary": "",
+            "url": "/premium/women/ribcage-womens-skirt/p/278890002"
+        }
+    }
+}

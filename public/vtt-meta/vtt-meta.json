@@ -1,0 +1,57 @@
+{
+  "vttType": "metadata",
+  "vttCues": [
+    {
+      "id": "8812961f-9f47-46f3-ce82-e7c0489d330d",
+      "startTime": 5,
+      "endTime": 7,
+      "text": {
+        "productArray": null,
+        "msg": "Shinny happy people",
+        "pause": true
+      },
+      "type": "text"
+    },
+    {
+      "id": "9aa14b7c-0526-42d9-c20b-d2a160517735",
+      "startTime": 9,
+      "endTime": 11,
+      "text": {
+        "productArray": [
+          "188820445",
+          "196260276",
+          "349640112",
+          "177800038"
+        ],
+        "msg": "Friends hanging out at the park with their favorite Levi gear",
+        "pause": true
+      },
+      "type": "products"
+    },
+    {
+      "id": "b94b3211-e241-48b7-b3c4-3083e399866e",
+      "startTime": 12,
+      "endTime": 14,
+      "text": {
+        "productArray": null,
+        "msg": "Celebration balloons for Levis 501 day.  Bring the noise",
+        "pause": false
+      },
+      "type": "text"
+    },
+    {
+      "id": "b9583772-855c-4a51-956f-26f1e14ab75a",
+      "startTime": 15,
+      "endTime": 17,
+      "text": {
+        "productArray": [
+          "773800014",
+          "045114609"
+        ],
+        "msg": "Light blue trucker jacket and 511 jeans",
+        "pause": true
+      },
+      "type": "products"
+    }
+  ]
+}

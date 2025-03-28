@@ -1,0 +1,82 @@
+{
+    "altText": null,
+    "averageOverallRatings": 3.7619,
+    "baseProduct": "22791",
+    "classifications": null,
+    "code": "227910053",
+    "colorGroup": "Black",
+    "colorName": "Celestial Rinse",
+    "customizable": false,
+    "description": "<p>An ultra-high rise. A super-sleek leg. The perfect amount of stretch. Levi’s® Mile High Super Skinny Jeans accentuate your shape in all the right places. This figure-flattering fit does it all.</p><ul> <li> Ultra high rise with a super sleek silhouette</li> <li> Crafted with the perfect amount of stretch for all day comfort</li> <li> Super skinny fit to accentuate your shape — and whatever shoe you choose to wear</li> <li> Branded with iconic Levi’s® leather patch at back waist</LI><LI>We partner with the Better Cotton Initiative to improve cotton farming globally</LI></UL>",
+    "findInStoreEligible": false,
+    "galleryImageList": null,
+    "images": [
+        {
+            "altText": null,
+            "format": "Backoffice",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/227910053-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Mobile",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/227910053-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Tablet",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/227910053-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Desktop",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/227910053-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        }
+    ],
+    "itemType": null,
+    "maxOrderQuantity": null,
+    "merchantBadge": "Water&ltLess®",
+    "minOrderQuantity": null,
+    "multidimensional": null,
+    "name": "Mile High Super Skinny Jeans",
+    "noOfRatings": 21,
+    "potentialPromotions": null,
+    "price": {
+        "code": null,
+        "currencyIso": "EUR",
+        "formattedValue": "$100.00",
+        "hardPrice": null,
+        "hardPriceFormattedValue": null,
+        "maxQuantity": null,
+        "minQuantity": null,
+        "priceType": "BUY",
+        "regularPrice": 100,
+        "regularPriceFormattedValue": "$100.00",
+        "softPrice": null,
+        "softPriceFormattedValue": null,
+        "value": 100,
+        "__typename": "priceData"
+    },
+    "promotionalBadge": null,
+    "purchasable": null,
+    "sizeGuide": null,
+    "soldIndividually": false,
+    "soldOutForever": false,
+    "summary": null,
+    "url": "/clothing/women/mile-high-super-skinny-jeans/p/227910053",
+    "variantOptions": null,
+    "variantType": null,
+    "errors": null,
+    "__typename": "product"
+}

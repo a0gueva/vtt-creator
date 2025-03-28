@@ -1,0 +1,6 @@
+{
+    "action": "handshake",
+    "data": {
+        "email": "admin@admin.com"
+    }
+}

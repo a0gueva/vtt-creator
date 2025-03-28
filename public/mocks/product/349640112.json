@@ -1,0 +1,124 @@
+{
+    "data": {
+        "product": {
+            "altText": "Women-Straight-Wedgie Straight Women's Jeans-Charleston Outlasted",
+            "averageOverallRatings": 4,
+            "baseProduct": "34964",
+            "channels": [],
+            "classifications": null,
+            "classification": "bottom",
+            "code": "349640112",
+            "colorGroup": "Dark Wash",
+            "colorName": "Charleston Outlasted - Dark Wash",
+            "comingSoon": false,
+            "crossSellProductUrl": null,
+            "crossSellSizeGroup": null,
+            "customizable": false,
+            "flxCustomization": false,
+            "availableForPickup": false,
+            "department": "Women",
+            "pdpGroupId": "34964",
+            "returnable": true,
+            "customizationType": "",
+            "description": "<p>It's the name you can't forget. Levi's® Wedgie Straight is a butt-lifting jean with a classic leg. This fit is specially constructed to highlight your curves.</p><UL> <LI> The cheekiest jeans in your closet </LI><LI> Designed with a special construction to lift and flatter your backside </LI><LI> Inspired by vintage Levi's® jeans </LI><LI> Classic straight leg </LI> </UL>",
+            "findInStoreEligible": false,
+            "lscoBreadcrumbs": [
+                {
+                    "categoryCode": "levi_clothing",
+                    "name": "Clothing",
+                    "url": "/clothing/c/levi_clothing"
+                },
+                {
+                    "categoryCode": "levi_clothing_women",
+                    "name": "Women",
+                    "url": "/clothing/women/c/levi_clothing_women"
+                },
+                {
+                    "categoryCode": "levi_clothing_women_jeans",
+                    "name": "Jeans",
+                    "url": "/clothing/women/jeans/c/levi_clothing_women_jeans"
+                },
+                {
+                    "categoryCode": "levi_clothing_women_jeans_straight",
+                    "name": "Straight",
+                    "url": "/clothing/women/jeans/straight/c/levi_clothing_women_jeans_straight"
+                },
+                {
+                    "categoryCode": null,
+                    "name": "Wedgie Straight Women's Jeans",
+                    "url": "/clothing/women/jeans/straight/wedgie-straight-womens-jeans/p/349640112"
+                }
+            ],
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": "Wedgie Straight Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 0,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/349640112-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "Wedgie Straight Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 1,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/349640112-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "Wedgie Straight Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/349640112-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "Wedgie Straight Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 3,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/349640112-front-pdp?$qv_desktop_full$"
+                    }
+                ]
+            },
+            "itemType": "Jeans",
+            "maxOrderQuantity": 6,
+            "merchantBadge": "Levi's® Premium",
+            "minOrderQuantity": 1,
+            "multidimensional": true,
+            "name": "Wedgie Straight Women's Jeans",
+            "noOfRatings": 1,
+            "pdpCmsContentId1": null,
+            "pdpCmsContentId2": null,
+            "preferredCategory": null,
+            "price": {
+                "code": null,
+                "currencyIso": "USD",
+                "formattedValue": "$98.00",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 98,
+                "regularPriceFormattedValue": "$98.00",
+                "softPrice": null,
+                "softPriceFormattedValue": null,
+                "value": 98
+            },
+            "promotionalBadge": null,
+            "purchasable": true,
+            "seoMetaData": {
+                "metaDescription": "<p>it's the name you can't forget. Levi's® wedgie straight is a butt-lifting jean with a classic leg. This fit is specially constructed to highlight your curves.</p>...",
+                "metaH1": "Wedgie Straight Women's Jeans",
+                "metaTitle": "Wedgie Straight Women's Jeans - Dark Wash | Levi's® US",
+                "robots": "index,follow"
+            },
+            "sizeGuide": "women-sizecharts-bottoms",
+            "soldIndividually": true,
+            "soldOutForever": false,
+            "summary": "",
+            "url": "/clothing/women/jeans/straight/wedgie-straight-womens-jeans/p/349640112"
+        }
+    }
+}

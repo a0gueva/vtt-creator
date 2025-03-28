@@ -1,0 +1,83 @@
+{
+    "altText": null,
+    "averageOverallRatings": 4.2735,
+    "baseProduct": "52797",
+    "classifications": null,
+    "classification": "bottom",
+    "code": "527970000",
+    "colorGroup": "Black",
+    "colorName": "Black Galaxy",
+    "customizable": true,
+    "description": "<p>We envisioned the 720™ High-Rise Super Skinny Jeans as the modern legging — and it became exactly that. This high-rise fit fully embraces your figure, lengthening your legs and holding your shape perfectly.</p><ul> <li> Designed to flatter your waist and hold you in</li> <li> A sleek, comfortable high-rise fit</li> <li> Excellent recovery so jeans keep their shape and never look baggy</li> <li> With its super-skinny leg, this universally flattering jean will highlight whatever shoes you wear them with</LI><LI>We partner with the Better Cotton Initiative to improve cotton farming globally</LI></UL>",
+    "findInStoreEligible": false,
+    "galleryImageList": null,
+    "images": [
+        {
+            "altText": null,
+            "format": "Backoffice",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/527970000-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Mobile",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/527970000-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Tablet",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/527970000-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Desktop",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/527970000-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        }
+    ],
+    "itemType": null,
+    "maxOrderQuantity": null,
+    "merchantBadge": "Water&ltLess®",
+    "minOrderQuantity": null,
+    "multidimensional": null,
+    "name": "720™ High-Waisted Super Skinny Jeans",
+    "noOfRatings": 117,
+    "potentialPromotions": null,
+    "price": {
+        "code": null,
+        "currencyIso": "EUR",
+        "formattedValue": "$100.00",
+        "hardPrice": null,
+        "hardPriceFormattedValue": null,
+        "maxQuantity": null,
+        "minQuantity": null,
+        "priceType": "BUY",
+        "regularPrice": 100,
+        "regularPriceFormattedValue": "$100.00",
+        "softPrice": null,
+        "softPriceFormattedValue": null,
+        "value": 100,
+        "__typename": "priceData"
+    },
+    "promotionalBadge": null,
+    "purchasable": null,
+    "sizeGuide": null,
+    "soldIndividually": false,
+    "soldOutForever": false,
+    "summary": null,
+    "url": "/clothing/women/jeans/720-high-waisted-super-skinny-jeans/p/527970000",
+    "variantOptions": null,
+    "variantType": null,
+    "errors": null,
+    "__typename": "product"
+}

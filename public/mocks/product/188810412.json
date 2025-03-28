@@ -1,0 +1,87 @@
+{
+    "data": {
+        "product": {
+            "altText": null,
+            "averageOverallRatings": 5,
+            "baseProduct": "18881",
+            "classifications": null,
+            "code": "188810412",
+            "classification": "bottom",
+            "colorGroup": "Blue",
+            "colorName": "High Roller",
+            "customizable": false,
+            "description": "<ul> <li> Designed to flatter, hold and lift</li> <li> The ultimate look-amazing jeans</li> <li> Levi's® sculpt fabrication with 4-way power stretch moves in all directions for enhanced mobility and comfort</li> <li> Iconic leather patch at back waist</LI><LI>We partner with the Better Cotton Initiative to improve cotton farming globally</LI></UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+            "galleryImage": [
+                {
+                    "altText": null,
+                    "format": "Backoffice",
+                    "galleryIndex": null,
+                    "imageType": "PRIMARY",
+                    "url": "https://lsco.scene7.com/is/image/lsco/188810412-front-pdp?$grid_desktop_bottoms$",
+                    "__typename": "genericImage"
+                },
+                {
+                    "altText": null,
+                    "format": "Grid_Mobile",
+                    "galleryIndex": null,
+                    "imageType": "PRIMARY",
+                    "url": "https://lsco.scene7.com/is/image/lsco/188810412-front-pdp?$grid_desktop_bottoms$",
+                    "__typename": "genericImage"
+                },
+                {
+                    "altText": null,
+                    "format": "Grid_Tablet",
+                    "galleryIndex": null,
+                    "imageType": "PRIMARY",
+                    "url": "https://lsco.scene7.com/is/image/lsco/188810412-front-pdp?$grid_desktop_bottoms$",
+                    "__typename": "genericImage"
+                },
+                {
+                    "altText": null,
+                    "format": "Grid_Desktop",
+                    "galleryIndex": null,
+                    "imageType": "PRIMARY",
+                    "url": "https://lsco.scene7.com/is/image/lsco/188810412-front-pdp?$grid_desktop_bottoms$",
+                    "__typename": "genericImage"
+                }
+            ]},
+            "itemType": null,
+            "maxOrderQuantity": null,
+            "merchantBadge": null,
+            "minOrderQuantity": null,
+            "multidimensional": null,
+            "name": "711™ Skinny Jeans",
+            "noOfRatings": 2,
+            "potentialPromotions": null,
+            "price": {
+                "code": null,
+                "currencyIso": "EUR",
+                "formattedValue": "$115.00",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 115,
+                "regularPriceFormattedValue": "$115.00",
+                "softPrice": null,
+                "softPriceFormattedValue": null,
+                "value": 115,
+                "__typename": "priceData"
+            },
+            "promotionalBadge": null,
+            "purchasable": null,
+            "sizeGuide": null,
+            "soldIndividually": false,
+            "soldOutForever": false,
+            "summary": null,
+            "url": "/clothing/women/711-skinny-jeans/p/188810412",
+            "variantOptions": null,
+            "variantType": null,
+            "errors": null,
+            "__typename": "product"
+        }
+    }
+}

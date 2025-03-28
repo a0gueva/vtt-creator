@@ -1,0 +1,97 @@
+{
+    "data": {
+        "product": {
+            "altText": "Women-Shirts, Blouses & Tops-Lightweight Mockneck T-Shirt-Whitecap Grey",
+            "averageOverallRatings": null,
+            "baseProduct": "19698",
+            "channels": [],
+            "classifications": null,
+            "classification": "top",
+            "code": "196980006",
+            "colorGroup": "Grey",
+            "colorName": "Whitecap Grey - Grey",
+            "comingSoon": false,
+            "crossSellProductUrl": null,
+            "crossSellSizeGroup": null,
+            "customizable": false,
+            "flxCustomization": false,
+            "availableForPickup": false,
+            "department": "Women",
+            "pdpGroupId": "19698",
+            "returnable": true,
+            "customizationType": "",
+            "description": "<p>This season, we're introducing \"second-skin\" lightweight stretchy tees. That's because these soft, printed knits make it easy to add a pop of fun to any look. Wear them alone or layer them with another top — the options are endless.</p><UL> <LI> Thin stretchy tee acts as a \"second-skin\" layer </LI><LI> Allover whimsical floral pattern </LI> </UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": "Lightweight Mockneck T-Shirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 0,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196980006-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Lightweight Mockneck T-Shirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 1,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196980006-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Lightweight Mockneck T-Shirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196980006-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Lightweight Mockneck T-Shirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 3,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196980006-front-pdp?$qv_desktop_full$"
+                    }
+                ]
+            },
+            "itemType": "TShirts",
+            "maxOrderQuantity": 6,
+            "merchantBadge": null,
+            "minOrderQuantity": 1,
+            "multidimensional": true,
+            "name": "Lightweight Mockneck T-Shirt",
+            "noOfRatings": null,
+            "pdpCmsContentId1": null,
+            "pdpCmsContentId2": null,
+            "preferredCategory": null,
+            "price": {
+                "code": null,
+                "currencyIso": "USD",
+                "formattedValue": "$39.50",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 39.5,
+                "regularPriceFormattedValue": "$39.50",
+                "softPrice": null,
+                "softPriceFormattedValue": null,
+                "value": 39.5
+            },
+            "promotionalBadge": "Buy a Tee & Trucker, get 30% off with Code 2FOR30",
+            "purchasable": true,
+            "seoMetaData": {
+                "metaDescription": "<p>this season, we're introducing \"second-skin\" lightweight stretchy tees. That's because these soft, printed knits make it easy to add a pop of fun to any look. Wea...",
+                "metaH1": "Lightweight Mockneck T-shirt",
+                "metaTitle": "Lightweight Mockneck T-shirt - Grey | Levi's® US",
+                "robots": "index,follow"
+            },
+            "sizeGuide": "women-sizecharts-tops",
+            "soldIndividually": true,
+            "soldOutForever": false,
+            "summary": "",
+            "url": "/clothing/women/shirts-blouses-tops/lightweight-mockneck-t-shirt/p/196980006"
+        }
+    }
+}

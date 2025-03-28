@@ -1,0 +1,97 @@
+{
+    "data": {
+        "product": {
+            "altText": "Women-Shirts, Blouses & Tops-Wildflower T-Shirt-Megan Stripe Cloud Dancer",
+            "averageOverallRatings": null,
+            "baseProduct": "19695",
+            "channels": [],
+            "classifications": null,
+            "classification": "top",
+            "code": "196950008",
+            "colorGroup": "White",
+            "colorName": "Megan Stripe Cloud Dancer - White",
+            "comingSoon": false,
+            "crossSellProductUrl": null,
+            "crossSellSizeGroup": null,
+            "customizable": false,
+            "flxCustomization": false,
+            "availableForPickup": false,
+            "department": "Women",
+            "pdpGroupId": "19695",
+            "returnable": true,
+            "customizationType": "",
+            "description": "<p>A casual tee with a retro-inspired design. Ties at the front for a flattering update.</p><UL> <LI> A classic tee with a tie waist </LI><LI> Casual, relaxed fit </LI><LI> Allover stripes </LI> </UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": "Wildflower T-Shirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 0,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196950008-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Wildflower T-Shirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 1,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196950008-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Wildflower T-Shirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196950008-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "Wildflower T-Shirt",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 3,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196950008-front-pdp?$qv_desktop_full$"
+                    }
+                ]
+            },
+            "itemType": "TShirts",
+            "maxOrderQuantity": 6,
+            "merchantBadge": null,
+            "minOrderQuantity": 1,
+            "multidimensional": true,
+            "name": "Wildflower T-Shirt",
+            "noOfRatings": null,
+            "pdpCmsContentId1": null,
+            "pdpCmsContentId2": null,
+            "preferredCategory": null,
+            "price": {
+                "code": null,
+                "currencyIso": "USD",
+                "formattedValue": "$39.50",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 39.5,
+                "regularPriceFormattedValue": "$39.50",
+                "softPrice": null,
+                "softPriceFormattedValue": null,
+                "value": 39.5
+            },
+            "promotionalBadge": "Buy a Tee & Trucker, get 30% off applied at checkout",
+            "purchasable": true,
+            "seoMetaData": {
+                "metaDescription": "<p>a casual tee with a retro-inspired design. Ties at the front for a flattering update.</p><ul> <li> a classic tee with a tie waist </li><li> casual, relaxed fit </...",
+                "metaH1": "Wildflower T-shirt",
+                "metaTitle": "Wildflower T-shirt - White | Levi's® US",
+                "robots": "index,follow"
+            },
+            "sizeGuide": "women-sizecharts-tops",
+            "soldIndividually": true,
+            "soldOutForever": false,
+            "summary": "",
+            "url": "/clothing/women/shirts-blouses-tops/wildflower-t-shirt/p/196950008"
+        }
+    }
+}

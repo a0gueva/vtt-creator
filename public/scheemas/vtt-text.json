@@ -1,0 +1,18 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1620055743.json", 
+	"title": "Root", 
+	"type": "array",
+	"default": [],
+	"items":{
+		"$id": "#root/items", 
+		"title": "Items", 
+		"type": "string",
+		"default": "",
+		"examples": [
+			"123456789"
+		],
+		"pattern": "\\d{9}"
+	}
+}

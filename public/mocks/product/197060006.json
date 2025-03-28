@@ -1,0 +1,97 @@
+{
+    "data": {
+        "product": {
+            "altText": "Women-Shirts, Blouses & Tops-High Neck Tank Top-Caviar Tie Dye Stripe",
+            "averageOverallRatings": null,
+            "baseProduct": "19706",
+            "channels": [],
+            "classifications": null,
+            "classification": "top",
+            "code": "197060006",
+            "colorGroup": "Multi-Color",
+            "colorName": "Caviar Tie Dye Stripe - Multi-Color",
+            "comingSoon": false,
+            "crossSellProductUrl": null,
+            "crossSellSizeGroup": null,
+            "customizable": false,
+            "flxCustomization": false,
+            "availableForPickup": false,
+            "department": "Women",
+            "pdpGroupId": "19706",
+            "returnable": true,
+            "customizationType": "",
+            "description": "<p>Meet your new favorite basic. This soft rib-knit tank curves at the shoulders for a flattering, '90s-inspired cut.</p><UL> <LI> Sleek wardrobe staple </LI><LI> Cutaway shoulders for a flattering fit </LI><LI> All-over tie-dye stripe pattern </LI> </UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": "High Neck Tank Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 0,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/197060006-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "High Neck Tank Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 1,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/197060006-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "High Neck Tank Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/197060006-front-pdp?$qv_desktop_full$"
+                    },
+                    {
+                        "altText": "High Neck Tank Top",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 3,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/197060006-front-pdp?$qv_desktop_full$"
+                    }
+                ]
+            },
+            "itemType": "TShirts",
+            "maxOrderQuantity": 6,
+            "merchantBadge": null,
+            "minOrderQuantity": 1,
+            "multidimensional": true,
+            "name": "High Neck Tank Top",
+            "noOfRatings": null,
+            "pdpCmsContentId1": null,
+            "pdpCmsContentId2": null,
+            "preferredCategory": null,
+            "price": {
+                "code": null,
+                "currencyIso": "USD",
+                "formattedValue": "$29.50",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 29.5,
+                "regularPriceFormattedValue": "$29.50",
+                "softPrice": null,
+                "softPriceFormattedValue": null,
+                "value": 29.5
+            },
+            "promotionalBadge": "Buy a Tee & Trucker, get 30% off with Code 2FOR30",
+            "purchasable": true,
+            "seoMetaData": {
+                "metaDescription": "<p>meet your new favorite basic. This soft rib-knit tank curves at the shoulders for a flattering, '90s-inspired cut.</p><ul> <li> sleek wardrobe staple </li><li> cu...",
+                "metaH1": "High Neck Tank Top",
+                "metaTitle": "High Neck Tank Top - Multi-color | Levi's® US",
+                "robots": "index,follow"
+            },
+            "sizeGuide": "women-sizecharts-tops",
+            "soldIndividually": true,
+            "soldOutForever": false,
+            "summary": "",
+            "url": "/clothing/women/shirts-blouses-tops/high-neck-tank-top/p/197060006"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "altText": "Women-Jeans-Mile High Super Skinny Women's Jeans-Black Celestial",
+    "averageOverallRatings": 2.9302,
+    "baseProduct": "22791",
+    "channels": [],
+    "classifications": null,
+    "code": "227910052",
+    "classification": "bottom",
+    "colorGroup": "Black",
+    "colorName": "Black Celestial",
+    "comingSoon": false,
+    "crossSellProductUrl": null,
+    "crossSellSizeGroup": null,
+    "customizable": false,
+    "flxCustomization": false,
+    "availableForPickup": false,
+    "department": "Women",
+    "pdpGroupId": "22791",
+    "returnable": true,
+    "customizationType": "",
+    "description": "<UL> <LI> Ultra high rise with a super sleek silhouette </LI><LI> Ultra high rise with a super sleek silhouette </LI><LI> Levi's® Sculpt with Hyperstretch is an advanced blend of Lycra® and cotton fibers for extreme stretch </LI> </UL>",
+    "findInStoreEligible": false,
+    "galleryImageList": null,
+    "images": [
+        {
+            "altText": "Mile High Super Skinny Women's Jeans",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 0,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/227910052-front-pdp?$qv_desktop_bottoms$"
+        },
+        {
+            "altText": "Mile High Super Skinny Women's Jeans",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 1,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/227910052-front-pdp?$grid_desktop_bottoms$"
+        },
+        {
+            "altText": "Mile High Super Skinny Women's Jeans",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 2,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/227910052-front-pdp?$grid_desktop_bottoms$"
+        },
+        {
+            "altText": "Mile High Super Skinny Women's Jeans",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 3,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/227910052-front-pdp?$grid_desktop_bottoms$"
+        }
+    ],
+    "itemType": "Jeans",
+    "maxOrderQuantity": 6,
+    "merchantBadge": "Levi's® Premium",
+    "minOrderQuantity": 1,
+    "multidimensional": true,
+    "name": "Mile High Super Skinny Women's Jeans",
+    "noOfRatings": 43,
+    "pdpCmsContentId1": "levis_women_milehigh",
+    "pdpCmsContentId2": "levi_clothing_women_sculpt_jeans_us",
+    "preferredCategory": null,
+    "price": {
+        "code": null,
+        "currencyIso": "USD",
+        "formattedValue": "$89.50",
+        "hardPrice": null,
+        "hardPriceFormattedValue": null,
+        "maxQuantity": null,
+        "minQuantity": null,
+        "priceType": "BUY",
+        "regularPrice": 89.5,
+        "regularPriceFormattedValue": "$89.50",
+        "softPrice": null,
+        "softPriceFormattedValue": null,
+        "value": 89.5
+    },
+    "promotionalBadge": "30% Off Applied at Checkout",
+    "purchasable": true,
+    "seoMetaData": {
+        "metaDescription": "<ul> <li> ultra high rise with a super sleek silhouette </li><li> ultra high rise with a super sleek silhouette </li><li> levi's® sculpt with hyperstretch is an adva...",
+        "metaH1": "Mile High Super Skinny Women's Jeans",
+        "metaTitle": "Mile High Super Skinny Women's Jeans - Black | Levi's® US",
+        "robots": "index,follow"
+    },
+    "sizeGuide": "women-sizecharts-bottoms",
+    "soldIndividually": true,
+    "soldOutForever": false,
+    "summary": "",
+    "url": "/clothing/women/jeans/mile-high-super-skinny-womens-jeans/p/227910052"
+}

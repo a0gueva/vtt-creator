@@ -1,0 +1,76 @@
+{
+    "altText": "Clothing-Bottoms-501® '93 Straight Men's Jeans-Thistle",
+    "averageOverallRatings": 4.2105,
+    "baseProduct": "79830",
+    "channels": [],
+    "code": "798300018",
+    "colorGroup": "Light Wash",
+    "colorName": "Thistle - Light Wash",
+    "comingSoon": false,
+    "crossSellProductUrl": null,
+    "crossSellSizeGroup": null,
+    "customizable": false,
+    "flxCustomization": false,
+    "availableForPickup": false,
+    "department": "Clothing",
+    "pdpGroupId": "79830",
+    "returnable": true,
+    "customizationType": "",
+    "description": "<p>Our 501® ‘93 Straight Jeans are inspired by a fit that defined the culture a generation ago, bringing true early ‘90s style to a new generation. Your thrift-store hunt is officially over.</p><UL> <LI> The newest addition to the 501® Family that’s true to the original ‘93 fit. </LI><LI> A vintage-inspired fit that sits at the waist. </LI><LI> Designed with a slightly higher rise. </LI><LI> Added stretch for comfort. </LI><LI> Designed with superior craftsmanship and extra attention, Levi's®️ Premium elevates our iconic styles with quality that’ll stand the test of time </LI><LI> Specially marked with an authentic Levi’s®️ Premium label </LI><LI> <a href=\"https://www.levi.com/US/en_US/customize/levis-future-finish/c/levi_clothing_future_finish_customize_us/facets/feature-gender/men\"target=\"_blank\">Customize your 501® '93 Straight Jeans <b>here</b></a> </LI> </UL>",
+    "findInStoreEligible": false,
+    "galleryImageList": null,
+    "images": [
+        {
+            "altText": "501® '93 Straight Men's Jeans",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 0,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/798300018-front-pdp?$qv_desktop_bottoms$"
+        },
+        {
+            "altText": "501® '93 Straight Men's Jeans",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 1,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/798300018-front-pdp?$grid_desktop_bottoms$"
+        },
+        {
+            "altText": "501® '93 Straight Men's Jeans",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 2,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/798300018-front-pdp?$grid_desktop_bottoms$"
+        },
+        {
+            "altText": "501® '93 Straight Men's Jeans",
+            "format": "Quickview_Desktop",
+            "galleryIndex": 3,
+            "imageType": "GALLERY",
+            "url": "https://lsco.scene7.com/is/image/lsco/798300018-front-pdp?$grid_desktop_bottoms$"
+        }
+    ],
+    "itemType": "Jeans",
+    "maxOrderQuantity": 6,
+    "merchantBadge": "Levi's® Premium",
+    "minOrderQuantity": 1,
+    "multidimensional": true,
+    "name": "501® '93 Straight Men's Jeans",
+    "noOfRatings": 19,
+    "pdpCmsContentId1": "levis_mens_501_93_pdp",
+    "pdpCmsContentId2": null,
+    "promotionalBadge": null,
+    "purchasable": true,
+    "seoMetaData": {
+        "metaDescription": "<p>our 501® ‘93 straight jeans are inspired by a fit that defined the culture a generation ago, bringing true early ‘90s style to a new generation. Your thrift-store...",
+        "metaH1": "501® '93 Straight Men's Jeans",
+        "metaTitle": "501® '93 Straight Men's Jeans - Light Wash | Levi's® US",
+        "robots": "index,follow"
+    },
+    "sizeGuide": "men-sizecharts-bottoms",
+    "soldIndividually": true,
+    "soldOutForever": false,
+    "summary": "",
+    "url": "/apparel/clothing/bottoms/501-93-straight-mens-jeans/p/798300018",
+    "variantOptions": [],
+    "variantType": "PC13Product"
+}

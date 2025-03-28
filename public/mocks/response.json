@@ -1,0 +1,239 @@
+{
+    "status": "OK",
+    "entry": {
+        "entryNumber": 2,
+        "quantity": 1,
+        "basePrice": {
+            "currencyIso": "USD",
+            "value": 138.0,
+            "priceType": "BUY",
+            "formattedValue": "$138.00"
+        },
+        "totalPrice": {
+            "currencyIso": "USD",
+            "value": 138.0,
+            "priceType": "BUY",
+            "formattedValue": "$138.00"
+        },
+        "product": {
+            "code": "2994500630M",
+            "name": "Original Trucker Jacket",
+            "url": "/apparel/clothing/tops/original-trucker-jacket/p/299450063",
+            "purchasable": true,
+            "stock": {
+                "stockLevelStatus": {
+                    "code": "inStock",
+                    "type": "StockLevelStatus"
+                },
+                "stockLevel": 6
+            },
+            "availableForPickup": false,
+            "price": {
+                "currencyIso": "USD",
+                "value": 98.0,
+                "priceType": "BUY",
+                "formattedValue": "$98.00",
+                "regularPrice": 98.0,
+                "regularPriceFormattedValue": "$98.00"
+            },
+            "baseProduct": "299450063",
+            "images": [
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Cart_Mobile",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$cart_mobile_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Cart_Tablet",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$cart_tablet_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Cart_Desktop",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$cart_desktop_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Mini-cart_Mobile",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$minicart_mobile_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Mini-cart_Tablet",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$minicart_tablet_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Mini-cart_Desktop",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$minicart_desktop_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Checkout_Mobile",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$checkout_mobile_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Checkout_Tablet",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$checkout_tablet_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Checkout_Desktop",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$checkout_desktop_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Swatch",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-swatch?$swatch$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Find-in-store_Mobile",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$FIS_mobile_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Find-in-store_Tablet",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$FIS_tablet_full$"
+                },
+                {
+                    "imageType": "PRIMARY",
+                    "format": "Find-in-store_Desktop",
+                    "url": "https://lsco.scene7.com/is/image/lsco/299450063-dynamic1-pdp?$FIS_desktop_full$"
+                }
+            ],
+            "categories": [
+                {
+                    "code": "levi_clothing_category1",
+                    "name": "Apparel",
+                    "url": "/apparel/c/levi_clothing_category1",
+                    "sequence": 0
+                },
+                {
+                    "code": "levi_clothing_category2",
+                    "name": "Clothing",
+                    "url": "/apparel/clothing/c/levi_clothing_category2",
+                    "sequence": 0
+                },
+                {
+                    "code": "levi_clothing_category3tops",
+                    "name": "Tops",
+                    "url": "/apparel/clothing/tops/c/levi_clothing_category3tops",
+                    "sequence": 0
+                }
+            ],
+            "baseOptions": [
+                {
+                    "variantType": "PC13Product",
+                    "selected": {
+                        "code": "2994500630M",
+                        "url": "/c//p/2994500630M",
+                        "variantOptionQualifiers": [],
+                        "displaySizeDescription": "M",
+                        "inStockFlag": false,
+                        "soldOutForever": false,
+                        "comingSoon": false
+                    }
+                },
+                {
+                    "variantType": "PC9Product",
+                    "selected": {
+                        "code": "299450063",
+                        "url": "/apparel/clothing/tops/original-trucker-jacket/p/299450063",
+                        "variantOptionQualifiers": [],
+                        "inStockFlag": false,
+                        "soldOutForever": false,
+                        "comingSoon": false
+                    }
+                }
+            ],
+            "configurable": false,
+            "itemType": "Product",
+            "soldIndividually": true,
+            "disabled": false,
+            "merchantBadge": "Customize",
+            "colorName": "Soft As Butter - Medium Wash",
+            "colorGroup": "Medium Wash",
+            "minOrderQuantity": 1,
+            "maxOrderQuantity": 6,
+            "sku": "2994500630M",
+            "altText": "Clothing-Tops-Original Trucker Jacket-Soft As Butter",
+            "pdpGroupId": "29945",
+            "department": "Clothing",
+            "findInStoreEligible": false,
+            "hassleFreeEnabled": false,
+            "customizationType": "",
+            "productCatalogId": "leviNAProductCatalog",
+            "customizable": true,
+            "returnable": false,
+            "flxCustomization": false
+        },
+        "updateable": true,
+        "configurationInfos": [],
+        "statusSummaryMap": {},
+        "comments": [],
+        "originalEntryNumber": 0,
+        "cancellableQty": 0,
+        "returnableQty": 0,
+        "taxValues": [],
+        "bundleNo": 0,
+        "removeable": false,
+        "editable": false,
+        "valid": false,
+        "addable": false,
+        "messageContainer": {
+            "messages": []
+        },
+        "subTotalPrice": {
+            "currencyIso": "USD",
+            "value": 138.0,
+            "priceType": "BUY",
+            "formattedValue": "$138.00"
+        },
+        "isGiftCardEntry": false,
+        "isExcludedFromAvailabilityCheck": false,
+        "productDiscount": {
+            "currencyIso": "USD",
+            "value": 0.0,
+            "priceType": "BUY",
+            "formattedValue": "$0.00"
+        },
+        "regularPrice": {
+            "currencyIso": "USD",
+            "value": 138.0,
+            "priceType": "BUY",
+            "formattedValue": "$138.00"
+        },
+        "orderDiscount": {
+            "currencyIso": "USD",
+            "value": 0.0,
+            "priceType": "BUY",
+            "formattedValue": "$0.00"
+        },
+        "lineNumber": 2,
+        "storeReserved": false,
+        "orderDiscountShare": 0,
+        "customizationDetailData": {
+            "customizationDetail": "Custom: \"COVID-19  \" Embroidery",
+            "customizedImgUrl": "https://api.spectrumcustomizer.com/api/assets/generated/recipe/readable/C9QZRJNG/south/width/300/height/400/?bgcolor=DDDEE0",
+            "recipeId": "VWRBEMKP",
+            "details": [
+                {
+                    "quantity": "1",
+                    "size": "M",
+                    "text3": "",
+                    "service": "EMB",
+                    "text2": "",
+                    "location": "CB",
+                    "text": "COVID-19",
+                    "fontColor": "Golden Yellow",
+                    "font": "Condensed Serif"
+                }
+            ]
+        },
+        "customized": true,
+        "flxEntry": false
+    }
+}

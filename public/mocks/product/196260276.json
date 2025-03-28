@@ -1,0 +1,97 @@
+{
+    "data": {
+        "product": {
+            "altText": "Women-Skinny-311 Shaping Skinny Women's Jeans-Slate Poppy",
+            "averageOverallRatings": null,
+            "baseProduct": "19626",
+            "channels": [],
+            "classifications": null,
+            "classification": "bottom",
+            "code": "196260276",
+            "colorGroup": "Light Wash",
+            "colorName": "Slate Poppy - Light Wash",
+            "comingSoon": false,
+            "crossSellProductUrl": null,
+            "crossSellSizeGroup": null,
+            "customizable": false,
+            "flxCustomization": false,
+            "availableForPickup": false,
+            "department": "Women",
+            "pdpGroupId": "19626",
+            "returnable": true,
+            "customizationType": "",
+            "description": "<UL> <LI> A super-comfortable jean with a flattering skinny leg </LI><LI> Built to contour curves, lengthen legs and celebrate your form </LI><LI> Made with an innovative tummy-sliming panel </LI><LI> Features Levi's® Sculpt with Hypersoft: super-soft for enhanced comfort with supportive stretch </LI><LI> Allover poppy pattern </LI> </UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": "311 Shaping Skinny Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 0,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196260276-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "311 Shaping Skinny Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 1,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196260276-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "311 Shaping Skinny Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 2,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196260276-front-pdp?$qv_desktop_bottoms$"
+                    },
+                    {
+                        "altText": "311 Shaping Skinny Women's Jeans",
+                        "format": "Quickview_Desktop",
+                        "galleryIndex": 3,
+                        "imageType": "GALLERY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/196260276-front-pdp?$qv_desktop_bottoms$"
+                    }
+                ]
+            },
+            "itemType": "Jeans",
+            "maxOrderQuantity": 6,
+            "merchantBadge": null,
+            "minOrderQuantity": 1,
+            "multidimensional": true,
+            "name": "311 Shaping Skinny Women's Jeans",
+            "noOfRatings": null,
+            "pdpCmsContentId1": null,
+            "pdpCmsContentId2": null,
+            "preferredCategory": null,
+            "price": {
+                "code": null,
+                "currencyIso": "USD",
+                "formattedValue": "$39.99",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 59.5,
+                "regularPriceFormattedValue": "$59.50",
+                "softPrice": 39.99,
+                "softPriceFormattedValue": "$39.99",
+                "value": 39.99
+            },
+            "promotionalBadge": null,
+            "purchasable": true,
+            "seoMetaData": {
+                "metaDescription": "<ul> <li> a super-comfortable jean with a flattering skinny leg </li><li> built to contour curves, lengthen legs and celebrate your form </li><li> made with an innov...",
+                "metaH1": "311 Shaping Skinny Women's Jeans",
+                "metaTitle": "311 Shaping Skinny Women's Jeans - Light Wash | Levi's® US",
+                "robots": "index,follow"
+            },
+            "sizeGuide": "women-sizecharts-bottoms",
+            "soldIndividually": true,
+            "soldOutForever": false,
+            "summary": "",
+            "url": "/clothing/women/jeans/skinny/311-shaping-skinny-womens-jeans/p/196260276"
+        }
+    }
+}

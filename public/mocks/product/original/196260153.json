@@ -1,0 +1,83 @@
+{
+    "altText": null,
+    "averageOverallRatings": 3.6667,
+    "baseProduct": "19626",
+    "classifications": null,
+    "code": "196260153",
+    "classification": "bottom",
+    "colorGroup": "Black",
+    "colorName": "London Nights",
+    "customizable": false,
+    "description": "<UL><LI>  Slims tummy and contours curves</LI><LI>   Features an innovative tummy-slimming panel</LI><LI>   Lifts seat and lengthens legs</LI><LI>   Levi's® sculpt fabrication with soft is a delicate blend of ultra-soft fibers and powerful stretch</LI><LI>   Iconic leather patch at back waist</LI><LI>We partner with the Better Cotton Initiative to improve cotton farming globally</LI></UL>",
+    "findInStoreEligible": false,
+    "galleryImageList": null,
+    "images": [
+        {
+            "altText": null,
+            "format": "Backoffice",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/196260153-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Mobile",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/196260153-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Tablet",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/196260153-front-pdp?$grid_desktop_bottoms$",
+            "__typename": "genericImage"
+        },
+        {
+            "altText": null,
+            "format": "Grid_Desktop",
+            "galleryIndex": null,
+            "imageType": "PRIMARY",
+            "url": "https://lsco.scene7.com/is/image/lsco/196260153-front-pdp-lse.jpg?$grid_desktop_full$",
+            "__typename": "genericImage"
+        }
+    ],
+    "itemType": null,
+    "maxOrderQuantity": null,
+    "merchantBadge": null,
+    "minOrderQuantity": null,
+    "multidimensional": null,
+    "name": "311™ Shaping Skinny Jeans",
+    "noOfRatings": 6,
+    "potentialPromotions": null,
+    "price": {
+        "code": null,
+        "currencyIso": "EUR",
+        "formattedValue": "$100.00",
+        "hardPrice": null,
+        "hardPriceFormattedValue": null,
+        "maxQuantity": null,
+        "minQuantity": null,
+        "priceType": "BUY",
+        "regularPrice": 100,
+        "regularPriceFormattedValue": "$100.00",
+        "softPrice": null,
+        "softPriceFormattedValue": null,
+        "value": 100,
+        "__typename": "priceData"
+    },
+    "promotionalBadge": null,
+    "purchasable": null,
+    "sizeGuide": null,
+    "soldIndividually": false,
+    "soldOutForever": false,
+    "summary": null,
+    "url": "/clothing/women/311-shaping-skinny-jeans/p/196260153",
+    "variantOptions": null,
+    "variantType": null,
+    "errors": null,
+    "__typename": "product"
+}

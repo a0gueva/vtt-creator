@@ -1,0 +1,88 @@
+{
+    "data": {
+        "product": {
+            "altText": null,
+            "averageOverallRatings": 3,
+            "baseProduct": "17780",
+            "classifications": null,
+            "code": "177800038",
+            "classification": "bottom",
+            "colorGroup": "Black",
+            "colorName": "Celestial Rinse",
+            "customizable": false,
+            "description": "<UL><LI>  Designed to flatter, hold and lift</LI><LI>    The seriously sexy fit</LI><LI>    Levi's® sculpt with hyperstretch is an advanced blend of Lycra® and cotton fibers for extreme stretch</LI><LI>    Iconic leather patch at back waist</LI><LI>Made with Water&ltLess® technology - Uses 96% less water than standard finishing techniques</LI><LI>We partner with the Better Cotton Initiative to improve cotton farming globally</LI></UL>",
+            "findInStoreEligible": false,
+            "galleryImageList": {
+                "galleryImage": [
+                    {
+                        "altText": null,
+                        "format": "Backoffice",
+                        "galleryIndex": null,
+                        "imageType": "PRIMARY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/177800038-front-pdp?$grid_desktop_bottoms$",
+                        "__typename": "genericImage"
+                    },
+                    {
+                        "altText": null,
+                        "format": "Grid_Mobile",
+                        "galleryIndex": null,
+                        "imageType": "PRIMARY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/177800038-front-pdp?$grid_desktop_bottoms$",
+                        "__typename": "genericImage"
+                    },
+                    {
+                        "altText": null,
+                        "format": "Grid_Tablet",
+                        "galleryIndex": null,
+                        "imageType": "PRIMARY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/177800038-front-pdp?$grid_desktop_bottoms$",
+                        "__typename": "genericImage"
+                    },
+                    {
+                        "altText": null,
+                        "format": "Grid_Desktop",
+                        "galleryIndex": null,
+                        "imageType": "PRIMARY",
+                        "url": "https://lsco.scene7.com/is/image/lsco/177800038-front-pdp?$grid_desktop_bottoms$",
+                        "__typename": "genericImage"
+                    }
+                ]
+            },
+            "itemType": null,
+            "maxOrderQuantity": null,
+            "merchantBadge": "Water&ltLess®",
+            "minOrderQuantity": null,
+            "multidimensional": null,
+            "name": "710™ Innovation Super Skinny Jeans",
+            "noOfRatings": 1,
+            "potentialPromotions": null,
+            "price": {
+                "code": null,
+                "currencyIso": "EUR",
+                "formattedValue": "$100.00",
+                "hardPrice": null,
+                "hardPriceFormattedValue": null,
+                "maxQuantity": null,
+                "minQuantity": null,
+                "priceType": "BUY",
+                "regularPrice": 100,
+                "regularPriceFormattedValue": "$100.00",
+                "softPrice": null,
+                "softPriceFormattedValue": null,
+                "value": 100,
+                "__typename": "priceData"
+            },
+            "promotionalBadge": null,
+            "purchasable": null,
+            "sizeGuide": null,
+            "soldIndividually": false,
+            "soldOutForever": false,
+            "summary": null,
+            "url": "/clothing/women/710-innovation-super-skinny-jeans/p/177800038",
+            "variantOptions": null,
+            "variantType": null,
+            "errors": null,
+            "__typename": "product"
+        }
+    }
+}
