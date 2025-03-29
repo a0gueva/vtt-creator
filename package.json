@@ -5,23 +5,27 @@
   "scripts": {
     "serve": "npx vue-cli-service serve --https --mode dev",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "crypto-js": "^4.0.0",
-    "node-sass": "^4.14.1",
+    "pinia": "^2.1.7",
     "sass-loader": "^8.0.0",
+    "uuid": "^9.0.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.42.1",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "^4.1.1",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "sass": "^1.86.0"
   },
   "eslintConfig": {
     "root": true,

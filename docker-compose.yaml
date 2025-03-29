@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  vtt-creator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vtt-creator-app
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+

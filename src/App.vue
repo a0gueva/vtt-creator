@@ -59,27 +59,27 @@
 const Preview = defineAsyncComponent(
   () => import("./components/VideoVTTPreview.vue")
 );
-
 const CueBuilder = defineAsyncComponent(
   () => import("./components/VTTCueBuilder.vue")
 );
-
 const ProgressBar = defineAsyncComponent(
   () => import("./components/ProgressBar.vue")
 );
 
 import { ref, defineAsyncComponent, onMounted } from "vue";
-import {appState} from "@/state/appState";
-import {downloadToFile} from "@/utils/FileUtils";
+import { useCueStore } from "@/state/cueStore";
+import { downloadToFile } from "@/utils/FileUtils";
 
 export default {
-  name: 'App',
+  name: "App",
   setup() {
+    const cueStore = useCueStore(); // ✅ Pinia store
+
     const videoPlayerRef = ref(null);
     const progressRef = ref(null);
     const headerRef = ref(null);
     const showCueBuilder = ref(true);
-    const cueList = ref([])
+    const cueList = ref([]);
     const seconds = ref(0);
     const currentPlayTime = ref(0);
     const showMenu = ref(false);
@@ -89,140 +89,112 @@ export default {
     const videoWrapperRef = ref(null);
     const vttType = ref(0);
 
-    const {stringifyVTT, uploadVTT, getVTTObj, deleteCue} = appState();
-
-    // computed
-
-    // methods
-
     const handlePBClick = (e) => {
-      console.log("PB Clicked ...", e, progress2Ref.value);
       videoPlayerRef.value.pause();
       if (e.addCue) {
         addCuePointer(e);
       } else {
-        const cueStartTime = (e.pos.x - 18)/e.scale.value;
+        const cueStartTime = (e.pos.x - 18) / e.scale.value;
         videoPlayerRef.value.currentTime = cueStartTime;
       }
-    }
+    };
 
     const handleProgress = (opts) => {
-      videoPlayerRef.value.currentTime = opts.sliderPos/opts.scale.value;
-    }
+      videoPlayerRef.value.currentTime = opts.sliderPos / opts.scale.value;
+    };
 
     const activateCue = (id) => {
-      // only one cue can be active
-      cueList.value.forEach(el => {
-        if (el.id !== id) {
-          console.log("CUE STARTS :: ", el.startTime);
-          el.active = false
-        }
-      })
-      let cue = cueList.value.find(el => el.id === id);
+      cueList.value.forEach((el) => {
+        if (el.id !== id) el.active = false;
+      });
+      const cue = cueList.value.find((el) => el.id === id);
       videoPlayerRef.value.pause();
-      // videoPlayerRef.value.currentTime = cue.startTime;
       cue.active = !cue.active;
-    }
+    };
 
     const addCuePointer = (e) => {
       let cue = {};
       const generateUUID = () => {
-        var d2 = (performance && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
-        var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var d2 = (performance.now() * 1000) || 0;
+        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
           var r = Math.random() * 16;
-          r = (d2 + r)%16 | 0;
-          d2 = Math.floor(d2/16);
-          return (c=='x' ? r : (r&0x7|0x8)).toString(16);
+          r = (d2 + r) % 16 | 0;
+          d2 = Math.floor(d2 / 16);
+          return (c == "x" ? r : (r & 0x7) | 0x8).toString(16);
         });
-        return uuid;
       };
       cue.id = generateUUID();
       cue.text = "";
-      // takes into account the with of cue pointer must divide width by 1/2.
-      // since width is 20 then needs to subtract half of that to set the cue position
-      cue.leftPos = (e.pos.x - 10) + "px";
+      cue.leftPos = e.pos.x - 10 + "px";
       cue.active = false;
       cue.saved = false;
-      // time of cue
-      // takes into account the margins that is why the -18
-      let cueStartTime = (e.pos.x - 18)/e.scale.value;
-      console.log("CUE START :: ", cueStartTime);
-      cue.startTime = Math.floor(cueStartTime);
+      cue.startTime = Math.floor((e.pos.x - 18) / e.scale.value);
       cueList.value.unshift(cue);
-      console.log("CUE :: ", cue);
       videoPlayerRef.value.pause();
       activateCue(cue.id);
-      // videoPlayerRef.value.currentTime = cueStartTime;
-    }
+    };
 
     const closeBuilder = (options) => {
       if (options.delete) {
-        cueList.value = cueList.value.filter(function(item) {
-            return item.id !== options.cue.id;
-        })
-        deleteCue(options.cue);
+        cueList.value = cueList.value.filter((item) => item.id !== options.cue.id);
+        cueStore.deleteCue(options.cue); // ✅ cueStore usage
       } else {
         options.cue.active = false;
         options.cue.saved = true;
       }
-    }
+    };
 
     const downloadVTT = () => {
-      downloadToFile(stringifyVTT(), "vtt-meta.json", "application/json");
+      downloadToFile(cueStore.stringifyVTT(), "vtt-meta.json", "application/json"); // ✅ cueStore usage
       showMenu.value = false;
-    }
+    };
 
     const previewVideo = () => {
       previewVid.value = !previewVid.value;
       videoPlayerRef.value.pause();
       showMenu.value = false;
-    }
+    };
 
-     // hooks
     onMounted(() => {
       videoPlayerRef.value.load();
-      videoPlayerRef.value.onloadedmetadata = function() {
+      videoPlayerRef.value.onloadedmetadata = function () {
         seconds.value = this.duration;
       };
-      videoPlayerRef.value.ontimeupdate = function() {
-        let currentTime = this.currentTime;
-        currentPlayTime.value = currentTime;
-      }
-      const vttFile = vttFileRef.value;
-      vttFile.addEventListener('change', function() {
-          var fr=new FileReader();
-          fr.onload= () => {
-              console.log("File ::", fr.result);
-              uploadVTT(fr.result);
-              // create the cues
-              // const vttCopy = Object.assign({}, getVTTObj());
-              getVTTObj().vttCues.forEach(vttCue => {
-                let cue = {};
-                cue.id = vttCue.id;
-                // use the scale value from the progressBar to generate the cue's let position
-                cue.leftPos = (vttCue.startTime * progress2Ref.value.scale) + 10 + "px";
-                cue.startTime = vttCue.startTime;
-                cue.active = false;
-                cue.saved = true;
-                cue.vttType = vttCue.type;
-                const {productArray, msg, pause} = vttCue.text;
-                cue.text = {msg, pause};
-                cue.text.productArray = productArray ? productArray.join() : null;
-                cueList.value.push(cue);
-              })
-          }
-          fr.readAsText(this.files[0]);
-      })
+      videoPlayerRef.value.ontimeupdate = function () {
+        currentPlayTime.value = this.currentTime;
+      };
 
-      // window events
+      const vttFile = vttFileRef.value;
+      vttFile.addEventListener("change", function () {
+        const fr = new FileReader();
+        fr.onload = () => {
+          cueStore.uploadVTT(fr.result); // ✅ cueStore usage
+          cueStore.getVTTObj().vttCues.forEach((vttCue) => {
+            const cue = {
+              id: vttCue.id,
+              leftPos: vttCue.startTime * progress2Ref.value.scale + 10 + "px",
+              startTime: vttCue.startTime,
+              active: false,
+              saved: true,
+              vttType: vttCue.type,
+              text: {
+                msg: vttCue.text.msg,
+                pause: vttCue.text.pause,
+                productArray: vttCue.text.productArray ? vttCue.text.productArray.join() : null,
+              },
+            };
+            cueList.value.push(cue);
+          });
+        };
+        fr.readAsText(this.files[0]);
+      });
+
       const hr = headerRef.value;
-      window.addEventListener("click", function(e) {
-        console.log(".....why");
-        // close dropdown when clicked outside
-        if(!hr.contains(e.target)) {
+      window.addEventListener("click", (e) => {
+        if (!hr.contains(e.target)) {
           showMenu.value = false;
         }
-      })
+      });
     });
 
     return {
@@ -246,16 +218,15 @@ export default {
       handlePBClick,
       handleProgress,
       videoWrapperRef,
-      vttType
-    }
+      vttType,
+    };
   },
-
   components: {
     CueBuilder,
     Preview,
-    ProgressBar
-  }
-}
+    ProgressBar,
+  },
+};
 </script>
 
 <style scoped lang="scss">

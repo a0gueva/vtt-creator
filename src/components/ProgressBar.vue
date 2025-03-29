@@ -288,7 +288,10 @@ export default {
 
 <style scoped lang="scss">
 .tickers {
-  position: relative;
+    position: absolute;
+    top: 16px;
+    /* left: 1px; */
+    z-index: 10;
 }
 .progress-ticks {
   padding: 0;

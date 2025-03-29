@@ -2,7 +2,7 @@
   <div class="vtt-inputs">
     <div class="close" @click="deleteCuePointer"></div>
     <div class="start-time">
-      <label >start time</label>
+      <label>start time</label>
       <input
         class="msg txt-input"
         v-model="vttStart"
@@ -16,7 +16,7 @@
       />
     </div>
     <div class="end-time">
-      <label >end time</label>
+      <label>end time</label>
       <input
         class="msg txt-input"
         v-model="vttEnd"
@@ -30,19 +30,16 @@
       />
     </div>
     <div v-if="!cue.saved" class="vtt-type" @click.stop>
-      <label><input type="checkbox" id="0" value="false" name="pause-vid"  v-model="pauseVid"
-         /> Pause on Cue</label>
-      <label><input type="radio" id="0" value="products" :name="cue.id"  v-model="vttType"
-         /> Product</label>
-      <label><input type="radio" id="1" value="text" :name="cue.id" v-model="vttType"
-         /> Text</label>
+      <label><input type="checkbox" value="false" name="pause-vid" v-model="pauseVid" /> Pause on Cue</label>
+      <label><input type="radio" value="products" :name="cue.id" v-model="vttType" /> Product</label>
+      <label><input type="radio" value="text" :name="cue.id" v-model="vttType" /> Text</label>
     </div>
     <div v-else class="vtt-type">
       <span v-if="cue.text.pause">THIS CUE PAUSES THE VIDEO STREAM FOR 3 SECONDS</span>
     </div>
-    <div class="error" :class="{'on': vttError !== null}">{{vttError}}</div>
+    <div class="error" :class="{'on': vttError !== null}">{{ vttError }}</div>
     <div class="meta-text">
-      <label >{{vttType}}</label>
+      <label>{{ vttType }}</label>
       <textarea
         class="msg txt-input"
         v-model="vttText"
@@ -55,8 +52,7 @@
     </div>
     <div v-if="vttType === 'products'" class="meta-text">
       <label class="col-msg">scene description</label>
-        <input 
-          :readonly="cue.saved" type="text" v-model="colMsg" class="cue-comment" />
+      <input :readonly="cue.saved" type="text" v-model="colMsg" class="cue-comment" />
     </div>
     <button v-if="!cue.saved" @click="buildVTT">Save Cue</button>
     <div v-else class="saved-cue">Saved</div>
@@ -65,22 +61,16 @@
 
 <script>
 import { ref, onMounted } from "vue";
-import {appState} from "@/state/appState";
+import { useCueStore } from "@/state/cueStore"; // NEW: using Pinia store
 
 export default {
   props: {
     cue: Object,
   },
 
-  setup(props, {emit}) {
-    console.log("Item Selector PROPS :: ", props);
-
-    const { pushCue } = appState();
-
+  setup(props, { emit }) {
+    const cueStore = useCueStore(); // NEW: init Pinia store
     const vttStart = ref("");
-    const vttStartRef= ref(null);
-    const vttEndRef = ref(null);
-    const vttTextRef = ref(null);
     const vttEnd = ref("");
     const vttText = ref("");
     const colMsg = ref(null);
@@ -89,78 +79,82 @@ export default {
     const pauseVid = ref(false);
     const inputPattern = ref("(?:[01]\\d|2[0123]):(?:[012345]\\d):(?:[012345]\\d)");
 
-    // methods
+    const vttStartRef = ref(null);
+    const vttEndRef = ref(null);
+    const vttTextRef = ref(null);
+
     const inputHandler = (e) => {
-        e.target.setCustomValidity("");
+      e.target.setCustomValidity("");
     };
 
     const deleteCuePointer = () => {
-      emit("close-builder", {cue: props.cue, delete: true});
-    }
+      emit("close-builder", { cue: props.cue, delete: true });
+    };
 
     const buildVTT = () => {
-      console.log("Building the VTT");
       const start = vttStartRef.value;
       const end = vttEndRef.value;
       const textRef = vttTextRef.value;
       let startSecs = 0;
       let endSecs = 0;
-      // .split(':').reduce((acc,time) => (60 * acc) + +time);
-      if (start.checkValidity())  {
-        startSecs = vttStart.value.split(':').reduce((acc,time) => (60 * acc) + +time);
-        console.log("Input is Valid...");
+
+      if (start.checkValidity()) {
+        startSecs = vttStart.value.split(':').reduce((acc, time) => (60 * acc) + +time);
       } else {
         start.setCustomValidity("value does not match pattern hh:mm:ss");
         start.reportValidity();
         return;
       }
-      if (end.checkValidity())  {
-        endSecs = vttEnd.value.split(':').reduce((acc,time) => (60 * acc) + +time);
-        console.log("Input is Valid...");
+
+      if (end.checkValidity()) {
+        endSecs = vttEnd.value.split(':').reduce((acc, time) => (60 * acc) + +time);
       } else {
         end.setCustomValidity("value does not match pattern hh:mm:ss");
         end.reportValidity();
         return;
       }
+
       if (endSecs > startSecs) {
-        let productCue = null
+        let productCue = null;
         if (vttType.value === "products" && vttText.value.match("^\\d{9}(?:|,?(| )\\d{9})*$")) {
-          const productArray = vttText.value.split(",").map(item=>item.trim());
+          const productArray = vttText.value.split(",").map(item => item.trim());
           productCue = {
             productArray,
             msg: colMsg.value,
             pause: pauseVid.value
-          }
+          };
           vttError.value = null;
-          console.log('IN CUE :: ', props.cue);
-          pushCue({id: props.cue.id, 
+
+          cueStore.pushCue({
+            id: props.cue.id,
             startTime: props.cue.startTime,
             endTime: endSecs,
             text: productCue,
             saved: true,
             type: vttType.value
           });
-          // console.log("VTT OBJ :: ", state.value.vttObj);
-          // all good close the cue
-          emit("close-builder", {cue: props.cue, delete: false});
+
+          emit("close-builder", { cue: props.cue, delete: false });
+
         } else if (vttType.value === "text") {
           vttError.value = null;
-          console.log('IN CUE :: ', props.cue);
           productCue = {
             productArray: null,
             msg: vttText.value,
             pause: pauseVid.value
-          }
-          pushCue({id: props.cue.id, 
+          };
+
+          cueStore.pushCue({
+            id: props.cue.id,
             startTime: props.cue.startTime,
             endTime: endSecs,
             text: productCue,
             saved: true,
             type: vttType.value
           });
-          // console.log("VTT OBJ :: ", state.value.vttObj);
-          // all good close the cue
-          emit("close-builder", {cue: props.cue, delete: false});
+
+          emit("close-builder", { cue: props.cue, delete: false });
+
         } else {
           textRef.setCustomValidity("value is not a valid set of product ids");
           textRef.reportValidity();
@@ -169,52 +163,30 @@ export default {
       } else {
         vttError.value = "Cue End Time must be greater than Start Time";
       }
-    }
+    };
 
     const formatCueTime = (timestamp) => {
-      var hours = Math.floor(timestamp / 60 / 60);
-      // 37
-      var minutes = Math.floor(timestamp / 60) - (hours * 60);
-      // 42
-      var seconds = timestamp % 60;
-      return hours.toString().padStart(2, '0') + ':' +
-        minutes.toString().padStart(2, '0') + ':' +
-          seconds.toString().padStart(2, '0');
-    }
+      const hours = Math.floor(timestamp / 3600);
+      const minutes = Math.floor((timestamp % 3600) / 60);
+      const seconds = Math.floor(timestamp % 60);
+      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    };
 
-    // hooks
     onMounted(() => {
       vttStart.value = formatCueTime(props.cue.startTime);
-      // end time as a default is 2 seconds after star time
       vttEnd.value = formatCueTime(props.cue.startTime + 2);
       vttType.value = props.cue.vttType;
+
       switch (props.cue.vttType) {
-        case "products" : 
+        case "products":
           vttText.value = props.cue.text.productArray;
           colMsg.value = props.cue.text.msg;
           break;
-        case "text" : 
+        case "text":
           vttText.value = props.cue.text.msg;
           break;
       }
-      
-      // const vttCopy = Object.assign({}, getVTTObj());
-      // const savedCue = getVTTObj().vttCues.find(vttCue => {
-      //   return vttCue.id === props.cue.id;
-      // });
-      // console.log("VTT CUE :: ", savedCue);
-      // vttType.value = savedCue.type;
-      // pauseVid.value = savedCue.text.pause;
-      // switch (savedCue.type) {
-      //   case "products" : 
-      //     vttText.value = savedCue.text.productArray.join();
-      //     colMsg.value = savedCue.text.msg;
-      //     break;
-      //   case "text" : 
-      //     vttText.value = savedCue.text.msg;
-      //     break;
-      // }
-    })
+    });
 
     return {
       vttStart,
@@ -232,17 +204,10 @@ export default {
       pauseVid,
       colMsg
     };
-  },
-
-  components: {},
-
-  mounted() {},
-
-  beforeUnmount() {},
+  }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .vtt-inputs {
     display: inline-flex;
@@ -251,7 +216,7 @@ export default {
     justify-content: space-between;
     width: 300px;
     position: relative;
-    padding: 30px 0 10px;
+    padding: 40px 0 10px;
     border-radius: 10px;
     .vtt-type {
       label {
@@ -295,7 +260,7 @@ export default {
     }
     .close {
       position: absolute;
-      top: -5px;
+      top: 5px;
       right: -10px;
       border-radius: 18px;
       width: 18px;

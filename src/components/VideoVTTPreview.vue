@@ -40,12 +40,10 @@
 
 <script>
 import VideoProductCard from "../components/shoppable/VideoProductCard.vue";
-import {appState} from "@/state/appState";
-// import {productQuery} from "@/gql/productQuery";
-
+import { useCueStore } from "@/state/cueStore"; // <-- use Pinia store
 import md5 from 'crypto-js/md5';
-
 import { ref, onMounted, watch } from "vue";
+
 export default {
   props: {
     videoPlayerRef: Object,
@@ -54,162 +52,110 @@ export default {
   setup(props) {
     console.log("Item Selector PROPS :: ", props);
 
+    const cueStore = useCueStore(); // <-- initialize store
+
     const scrollItemToView = ref(null);
     const productCollection = ref([]);
     const metaFileSrc = ref(null);
     const shoppableList = ref(null);
     const vttTrack = ref({});
-
-    const {getVTTObj} = appState();
-
-    // 
     
-    // methods
-    const codeSeen = (collectionId) => {
-      return productCollection.value.find(el => {
-        return el.hash === collectionId;
-      });
-    };
-
+    // same logic...
     const fetchCollection = (collection) => {
       const fetchPromises = [];
-      // fetch only if there are product ids
       if (collection.products) {
-        /////// TEST MODE ////////
-        collection.products.forEach ((product) => {
-          const promoise = fetch(`mocks/product/${product}.json`);
-          fetchPromises.push(promoise);
-        })
-        /////// STAGING DATA //////
-        // collection.products.forEach ((product) => {
-        //   const promoise = fetch(`https://staging01.dtc.levi.com/nextgen-webhooks/?operationName=product&locale=US-en_US`, {
-        //       method: "POST",
-        //       headers: {
-        //           "Content-Type": "application/json",
-        //           Accept: "application/json",
-        //       },
-        //       body: JSON.stringify({
-        //           operationName: "product",
-        //           variables: {
-        //             code: product
-        //           },
-        //           query: productQuery
-        //       }),
-        //   });
-        //   fetchPromises.push(promoise);
-        // })
-        
-        Promise.all(fetchPromises).then(function (responses) {
-            // Get a JSON object from each of the responses
-            return Promise.all(responses.map(function (response) {
-              return response.json();
-            }));
-          }).then(function (data) {
-            // all the data has returned find the collection and push it
-            const found = productCollection.value.find(el => {
-              return el.hash === collection.hash;
-            });
+        collection.products.forEach((product) => {
+          const promise = fetch(`mocks/product/${product}.json`);
+          fetchPromises.push(promise);
+        });
+        Promise.all(fetchPromises)
+          .then((responses) => Promise.all(responses.map((r) => r.json())))
+          .then((data) => {
+            const found = productCollection.value.find(el => el.hash === collection.hash);
             found.productData = data;
-            console.log("DATA :: ", data);
-            // const videoTrack = document.querySelector("track");
-          }).catch(function (error) {
-            console.log(error);
-          });
+          })
+          .catch((error) => console.error(error));
       }
-    }
+    };
 
     const processCodeEntries = (collectionId) => {
-      const found = productCollection.value.find(el => {
-        return el.hash === collectionId;
-      });
-      productCollection.value = productCollection.value.filter(el => {
-        return el.hash !== collectionId;
-      });
+      const found = productCollection.value.find(el => el.hash === collectionId);
+      productCollection.value = productCollection.value.filter(el => el.hash !== collectionId);
       productCollection.value.unshift(found);
-      // fetch the products in the collection
       fetchCollection(found);
- 
-    }
+    };
 
     const addToBucket = (val) => {
-      const data = {products: val.productIds};
+      const data = { products: val.productIds };
       const productsHash = md5(data.products.toString()).toString();
       const productColl = { hash: productsHash, products: data.products };
+
       if (!productCollection.value.some((e) => e.hash === productsHash)) {
         productCollection.value.unshift(productColl);
       } else {
-          const found = productCollection.value.find((el) => {
-          return el.hash === productsHash;
-        });
-        productCollection.value = productCollection.value.filter((el) => {
-          return el.hash !== productsHash;
-        });
+        const found = productCollection.value.find((el) => el.hash === productsHash);
+        productCollection.value = productCollection.value.filter((el) => el.hash !== productsHash);
         productCollection.value.unshift(found);
       }
-      const el = shoppableList.value
-      el.scrollTop = 0;
-    }
+      shoppableList.value.scrollTop = 0;
+    };
 
-    // watchers
+    watch(
+      () => cueStore.vttObj,
+      (newVttObj) => {
+        if (!newVttObj) return;
 
-    watch(vttTrack, () => {
-      const video = props.videoPlayerRef;
-      const {vttType, vttCues} = vttTrack.value;
-      const track = video.addTextTrack(vttType);
-      vttCues.forEach(cue => {
-        const newCue = new VTTCue(cue.startTime, cue.endTime, JSON.stringify(cue.text));
-        track.addCue(newCue);
-      });
-      // handle the cue change
-      track.oncuechange = (e) => {
-        console.log(e);
-        // get the meta text
-        const meta = [...e.target.activeCues]
-          .map((t) => t.text)
-          .join(" ");
-        if (meta) {
-          const data = JSON.parse(meta);
-          const productsHash = md5(meta).toString();
-          const productColl = {hash: productsHash,
-            products: Array.isArray(data.productArray) ? data.productArray : null,
-            message: data.msg,
-          };
-          // check if the hash is in collections array
-          if (!productCollection.value.some(e => e.hash === productsHash)) {
-            productCollection.value.unshift(productColl);
-            fetchCollection(productColl);
-          } else {
-            processCodeEntries(productsHash);
-            const el = shoppableList.value;
-            el.scrollTop = 0;
+        const video = props.videoPlayerRef;
+        const { vttType, vttCues } = newVttObj;
+        const track = video.addTextTrack(vttType);
+        vttCues.forEach(cue => {
+          const newCue = new VTTCue(cue.startTime, cue.endTime, JSON.stringify(cue.text));
+          track.addCue(newCue);
+        });
+
+        track.oncuechange = (e) => {
+          const meta = [...e.target.activeCues].map(t => t.text).join(" ");
+          if (meta) {
+            const data = JSON.parse(meta);
+            const productsHash = md5(meta).toString();
+            const productColl = {
+              hash: productsHash,
+              products: Array.isArray(data.productArray) ? data.productArray : null,
+              message: data.msg,
+            };
+
+            if (!productCollection.value.some(e => e.hash === productsHash)) {
+              productCollection.value.unshift(productColl);
+              fetchCollection(productColl);
+            } else {
+              processCodeEntries(productsHash);
+              shoppableList.value.scrollTop = 0;
+            }
+
+            if (data.pause) {
+              video.pause();
+              setTimeout(() => video.play(), 3000);
+            }
           }
-          if (data.pause) {
-            video.pause();
-            window.setTimeout(() => {
-              video.play();
-            }, 3000);
-          }
-        }
-      };
-    });
+        };
+      },
+      { immediate: true, deep: true }
+    );
 
-    // hooks
     onMounted(() => {
-      vttTrack.value = getVTTObj();
+      vttTrack.value = cueStore.vttObj; // <-- use store method
     });
 
     return {
       vttTrack,
       metaFileSrc,
       productCollection,
-      codeSeen,
       scrollItemToView,
       shoppableList,
       addToBucket
     };
   },
-  
-  
+
   components: {
     VideoProductCard
   },
