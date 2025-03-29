@@ -1,4 +1,5 @@
-// REPLACES: FileUtils.js - Enhanced for export and parsing with validation
+// REPLACES: FileUtils.js - Enhanced for export, parsing, and downloading
+
 export function parseVtt(vttText) {
   const lines = vttText.split('\n');
   const cues = [];
@@ -28,4 +29,13 @@ export function exportToVtt(cues) {
     vttContent += `${index + 1}\n${cue.start} --> ${cue.end}\n${cue.text}\n\n`;
   });
   return vttContent;
+}
+
+export function exportToFile(content, filename, mimeType = 'text/vtt') {
+  const blob = new Blob([content], { type: mimeType });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = filename.endsWith('.vtt') ? filename : `${filename}.vtt`;
+  link.click();
+  URL.revokeObjectURL(link.href);
 }

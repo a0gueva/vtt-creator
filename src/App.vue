@@ -68,7 +68,7 @@ const ProgressBar = defineAsyncComponent(
 
 import { ref, defineAsyncComponent, onMounted } from "vue";
 import { useCueStore } from "@/state/cueStore";
-import { downloadToFile } from "@/utils/FileUtils";
+import { exportToFile } from "@/utils/FileUtils";
 
 export default {
   name: "App",
@@ -145,7 +145,7 @@ export default {
     };
 
     const downloadVTT = () => {
-      downloadToFile(cueStore.stringifyVTT(), "vtt-meta.json", "application/json"); // ✅ cueStore usage
+      exportToFile(cueStore.stringifyVTT(), "vtt-meta.json", "application/json"); // ✅ cueStore usage
       showMenu.value = false;
     };
 
@@ -207,7 +207,7 @@ export default {
       progressRef,
       progress2Ref,
       showMenu,
-      downloadToFile,
+      exportToFile,
       downloadVTT,
       closeBuilder,
       previewVid,
@@ -417,7 +417,7 @@ export default {
     .cue-editor {
       height: 100vh;
       flex-basis: 25vw;
-      min-width: 320px;
+      width: 320px;
       display: flex;
       flex-direction: column;
       overflow-y: auto;

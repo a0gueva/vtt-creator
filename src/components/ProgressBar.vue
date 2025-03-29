@@ -382,9 +382,9 @@ export default {
         position: absolute;
         top: 34px;
         line-height: 16px;
-        left: 11px;
+        left: 10px;
         color: #4e91f7;
-        font-size: 16px;
+        font-size: 17px;
       }
     }
     .progress {
