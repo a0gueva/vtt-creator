@@ -23,10 +23,28 @@ export function parseVtt(vttText) {
   return cues;
 }
 
+// export function exportToVtt(cues) {
+//   let vttContent = 'WEBVTT\n\n';
+//   cues.forEach((cue, index) => {
+//     vttContent += `${index + 1}\n${cue.start} --> ${cue.end}\n${cue.text}\n\n`;
+//   });
+//   return vttContent;
+// }
+
+function formatTime(seconds) {
+  const h = String(Math.floor(seconds / 3600)).padStart(2, "0");
+  const m = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
+  const s = String((seconds % 60).toFixed(3)).padStart(6, "0");
+  return `${h}:${m}:${s}`;
+}
+
 export function exportToVtt(cues) {
   let vttContent = 'WEBVTT\n\n';
   cues.forEach((cue, index) => {
-    vttContent += `${index + 1}\n${cue.start} --> ${cue.end}\n${cue.text}\n\n`;
+    const start = formatTime(cue.startTime || cue.start);
+    const end = formatTime(cue.endTime || cue.end);
+    const text = typeof cue.text === "string" ? cue.text : JSON.stringify(cue.text);
+    vttContent += `${index + 1}\n${start} --> ${end}\n${text}\n\n`;
   });
   return vttContent;
 }

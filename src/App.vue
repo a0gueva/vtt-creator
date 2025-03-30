@@ -6,227 +6,182 @@
     </span>
     <span v-if="previewVid" class="preview"></span>
     <div class="notice">Click on the progress bar to generate a VTT Cue as the video plays. The bar is calibrated to the length of the video</div>
-    <ul class="menu" :class="{'off': !showMenu}">
+    <ul class="menu" :class="{ off: !showMenu }">
       <li class="menu-item" @click="downloadVTT">Download VTT</li>
-      <li class="menu-item" :class="{'on': previewVid}" @click="previewVideo">Preview Video with VTT</li>
+      <li class="menu-item" :class="{ on: previewVid }" @click="previewVideo">Preview Video with VTT</li>
       <li class="menu-item">
-        <span :class="{'off': previewVid}" >Upload VTT data from a file</span>
-        <input v-if="!previewVid" type="file" id="vtt-file" name="vtt-file" ref="vttFileRef"/>
+        <span :class="{ off: previewVid }">Upload VTT data from a file</span>
+        <input v-if="!previewVid" type="file" id="vtt-file" name="vtt-file" ref="vttFileRef" />
       </li>
     </ul>
   </section>
+
   <div class="app-body">
     <div class="cue-editor">
       <div class="cue-editor-title" v-if="!previewVid">VTT CUE POINTERS</div>
-      <div class="cue-editor-title" :class="{'preview': previewVid}" v-else>PREVIEWING VTT CUES</div>
-      <div class="builder-tester" v-for="cue in cueList" 
-        :key="cue.id" @click.stop="activateCue(cue.id)">
-        <cue-builder :cue="cue"  @click.stop.prevent @closeBuilder="closeBuilder"></cue-builder>
+      <div class="cue-editor-title" :class="{ preview: previewVid }" v-else>PREVIEWING VTT CUES</div>
+      <div
+        class="builder-tester"
+        v-for="cue in cueList"
+        :key="cue.id"
+        @click.stop="activateCue(cue.id)"
+      >
+        <cue-builder
+          :cue="cue"
+          @click.stop.prevent
+          @closeBuilder="closeBuilder"
+        />
       </div>
     </div>
-    <div class="video-wrapper" ref="videoWrapperRef">
-      <div class="video-previewer">
-        <video
-          ref="videoPlayerRef"
-          class="video-el br-all pos-absolute"
-          src="https://assets.contentstack.io/v3/assets/bltab687eb09ed92451/blt0516a2ddf86d32f7/60256c5f5f9b2812764c3de9/levisSeasonalSample.mp4"
-          crossorigin
-          controls="controls"
-          preload="none"
-          loop
-          type="video/mp4"
-        >
-        </video>
-        <preview v-if="previewVid" :videoPlayerRef="videoPlayerRef">
-        </preview>
-      </div>
-      <div class="separator"></div>
-      <div class="separator"></div>
-      <progress-bar v-if="seconds" ref="progress2Ref" :length="seconds" 
-        @progress-bar-click="handlePBClick" @progress-bar-move="handleProgress" 
-          :pos="currentPlayTime"></progress-bar>
-      <div class="separator"></div>
-      <div class="test-items">
-        Tops: 346250001, 196980006, 197060006, 287880003, 287880004, 196950008, 197540002, 197540003
-        <br>
-        Bottoms: 278890002, 188810412, 188820445, 196260276, 349640112, 177800038, 188810052
-      </div>
+
+    <!-- 👇 UPDATED SECTION START: replaced raw video layout with VideoPlayerContainer.vue -->
+    <video-player-container
+      :previewVid="previewVid"
+      @progress-bar-click="handlePBClick"
+      @progress-bar-move="handleProgress"
+      @video-ref-ready="handleVideoRefs"
+    />
+    <!-- 👆 UPDATED SECTION END -->
+
+    <div class="separator"></div>
+
+    <div class="test-items">
+      Tops: 346250001, 196980006, 197060006, 287880003, 287880004, 196950008, 197540002, 197540003
+      <br />
+      Bottoms: 278890002, 188810412, 188820445, 196260276, 349640112, 177800038, 188810052
     </div>
   </div>
 </template>
 
-<script>
-const Preview = defineAsyncComponent(
-  () => import("./components/VideoVTTPreview.vue")
-);
-const CueBuilder = defineAsyncComponent(
-  () => import("./components/VTTCueBuilder.vue")
-);
-const ProgressBar = defineAsyncComponent(
-  () => import("./components/ProgressBar.vue")
-);
-
-import { ref, defineAsyncComponent, onMounted } from "vue";
+<script setup>
+import { ref, onMounted } from "vue";
 import { useCueStore } from "@/state/cueStore";
 import { exportToFile } from "@/utils/FileUtils";
+import CueBuilder from "./components/VTTCueBuilder.vue";
+// import Preview from "./components/VideoVTTPreview.vue";
+import VideoPlayerContainer from "./components/VideoPlayer.vue";
 
-export default {
-  name: "App",
-  setup() {
-    const cueStore = useCueStore(); // ✅ Pinia store
+const cueStore = useCueStore();
 
-    const videoPlayerRef = ref(null);
-    const progressRef = ref(null);
-    const headerRef = ref(null);
-    const showCueBuilder = ref(true);
-    const cueList = ref([]);
-    const seconds = ref(0);
-    const currentPlayTime = ref(0);
-    const showMenu = ref(false);
-    const previewVid = ref(false);
-    const vttFileRef = ref(null);
-    const progress2Ref = ref(null);
-    const videoWrapperRef = ref(null);
-    const vttType = ref(0);
+const videoPlayerRef = ref(null);
+const progress2Ref = ref(null);
+const headerRef = ref(null);
+// const showCueBuilder = ref(true);
+const cueList = ref([]);
+// const seconds = ref(0);
+// const currentPlayTime = ref(0);
+const showMenu = ref(false);
+const previewVid = ref(false);
+const vttFileRef = ref(null);
+// const vttType = ref(0);
 
-    const handlePBClick = (e) => {
-      videoPlayerRef.value.pause();
-      if (e.addCue) {
-        addCuePointer(e);
-      } else {
-        const cueStartTime = (e.pos.x - 18) / e.scale.value;
-        videoPlayerRef.value.currentTime = cueStartTime;
-      }
-    };
-
-    const handleProgress = (opts) => {
-      videoPlayerRef.value.currentTime = opts.sliderPos / opts.scale.value;
-    };
-
-    const activateCue = (id) => {
-      cueList.value.forEach((el) => {
-        if (el.id !== id) el.active = false;
-      });
-      const cue = cueList.value.find((el) => el.id === id);
-      videoPlayerRef.value.pause();
-      cue.active = !cue.active;
-    };
-
-    const addCuePointer = (e) => {
-      let cue = {};
-      const generateUUID = () => {
-        var d2 = (performance.now() * 1000) || 0;
-        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
-          var r = Math.random() * 16;
-          r = (d2 + r) % 16 | 0;
-          d2 = Math.floor(d2 / 16);
-          return (c == "x" ? r : (r & 0x7) | 0x8).toString(16);
-        });
-      };
-      cue.id = generateUUID();
-      cue.text = "";
-      cue.leftPos = e.pos.x - 10 + "px";
-      cue.active = false;
-      cue.saved = false;
-      cue.startTime = Math.floor((e.pos.x - 18) / e.scale.value);
-      cueList.value.unshift(cue);
-      videoPlayerRef.value.pause();
-      activateCue(cue.id);
-    };
-
-    const closeBuilder = (options) => {
-      if (options.delete) {
-        cueList.value = cueList.value.filter((item) => item.id !== options.cue.id);
-        cueStore.deleteCue(options.cue); // ✅ cueStore usage
-      } else {
-        options.cue.active = false;
-        options.cue.saved = true;
-      }
-    };
-
-    const downloadVTT = () => {
-      exportToFile(cueStore.stringifyVTT(), "vtt-meta.json", "application/json"); // ✅ cueStore usage
-      showMenu.value = false;
-    };
-
-    const previewVideo = () => {
-      previewVid.value = !previewVid.value;
-      videoPlayerRef.value.pause();
-      showMenu.value = false;
-    };
-
-    onMounted(() => {
-      videoPlayerRef.value.load();
-      videoPlayerRef.value.onloadedmetadata = function () {
-        seconds.value = this.duration;
-      };
-      videoPlayerRef.value.ontimeupdate = function () {
-        currentPlayTime.value = this.currentTime;
-      };
-
-      const vttFile = vttFileRef.value;
-      vttFile.addEventListener("change", function () {
-        const fr = new FileReader();
-        fr.onload = () => {
-          cueStore.uploadVTT(fr.result); // ✅ cueStore usage
-          cueStore.getVTTObj().vttCues.forEach((vttCue) => {
-            const cue = {
-              id: vttCue.id,
-              leftPos: vttCue.startTime * progress2Ref.value.scale + 10 + "px",
-              startTime: vttCue.startTime,
-              active: false,
-              saved: true,
-              vttType: vttCue.type,
-              text: {
-                msg: vttCue.text.msg,
-                pause: vttCue.text.pause,
-                productArray: vttCue.text.productArray ? vttCue.text.productArray.join() : null,
-              },
-            };
-            cueList.value.push(cue);
-          });
-        };
-        fr.readAsText(this.files[0]);
-      });
-
-      const hr = headerRef.value;
-      window.addEventListener("click", (e) => {
-        if (!hr.contains(e.target)) {
-          showMenu.value = false;
-        }
-      });
-    });
-
-    return {
-      showCueBuilder,
-      activateCue,
-      cueList,
-      addCuePointer,
-      videoPlayerRef,
-      currentPlayTime,
-      progressRef,
-      progress2Ref,
-      showMenu,
-      exportToFile,
-      downloadVTT,
-      closeBuilder,
-      previewVid,
-      previewVideo,
-      headerRef,
-      seconds,
-      vttFileRef,
-      handlePBClick,
-      handleProgress,
-      videoWrapperRef,
-      vttType,
-    };
-  },
-  components: {
-    CueBuilder,
-    Preview,
-    ProgressBar,
-  },
+const handlePBClick = (e) => {
+  videoPlayerRef.value.pause();
+  if (e.addCue) {
+    addCuePointer(e);
+  } else {
+    const cueStartTime = (e.pos.x - 18) / e.scale.value;
+    videoPlayerRef.value.currentTime = cueStartTime;
+  }
 };
+
+const handleProgress = (opts) => {
+  videoPlayerRef.value.currentTime = opts.sliderPos / opts.scale.value;
+};
+
+const activateCue = (id) => {
+  cueList.value.forEach((el) => {
+    if (el.id !== id) el.active = false;
+  });
+  const cue = cueList.value.find((el) => el.id === id);
+  videoPlayerRef.value.pause();
+  cue.active = !cue.active;
+};
+
+const addCuePointer = (e) => {
+  let cue = {};
+  const generateUUID = () => {
+    var d2 = (performance.now() * 1000) || 0;
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16;
+      r = (d2 + r) % 16 | 0;
+      d2 = Math.floor(d2 / 16);
+      return (c === "x" ? r : (r & 0x7) | 0x8).toString(16);
+    });
+  };
+  cue.id = generateUUID();
+  cue.text = "";
+  cue.leftPos = e.pos.x - 10 + "px";
+  cue.active = false;
+  cue.saved = false;
+  cue.startTime = ((e.pos.x - 18) / e.scale.value);
+  cueList.value.unshift(cue);
+  videoPlayerRef.value.pause();
+  activateCue(cue.id);
+};
+
+const closeBuilder = (options) => {
+  if (options.delete) {
+    cueList.value = cueList.value.filter((item) => item.id !== options.cue.id);
+    cueStore.deleteCue(options.cue);
+  } else {
+    options.cue.active = false;
+    options.cue.saved = true;
+  }
+};
+
+const downloadVTT = () => {
+  const vttText = cueStore.stringifyVTT();
+  exportToFile(vttText, "vtt-meta.vtt", "text/vtt");
+  showMenu.value = false;
+};
+
+const previewVideo = () => {
+  previewVid.value = !previewVid.value;
+  videoPlayerRef.value.pause();
+  showMenu.value = false;
+};
+
+const handleVideoRefs = ({ videoPlayerRef: vpRef, progress2Ref: p2Ref }) => {
+  videoPlayerRef.value = vpRef.value;
+  progress2Ref.value = p2Ref.value;
+};
+
+onMounted(() => {
+  const vttFile = vttFileRef.value;
+  vttFile.addEventListener("change", function () {
+    const fr = new FileReader();
+    fr.onload = () => {
+      cueStore.uploadVTT(fr.result);
+      cueStore.getVTTObj().vttCues.forEach((vttCue) => {
+        const cue = {
+          id: vttCue.id,
+          leftPos: vttCue.startTime * progress2Ref.value.scale + 10 + "px",
+          startTime: vttCue.startTime,
+          active: false,
+          saved: true,
+          vttType: vttCue.type,
+          text: {
+            msg: vttCue.text.msg,
+            pause: vttCue.text.pause,
+            productArray: vttCue.text.productArray
+              ? vttCue.text.productArray.join()
+              : null,
+          },
+        };
+        cueList.value.push(cue);
+      });
+    };
+    fr.readAsText(this.files[0]);
+  });
+
+  const hr = headerRef.value;
+  window.addEventListener("click", (e) => {
+    if (!hr.contains(e.target)) {
+      showMenu.value = false;
+    }
+  });
+});
 </script>
 
 <style scoped lang="scss">

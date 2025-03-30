@@ -7,6 +7,6 @@ services:
       dockerfile: Dockerfile
     container_name: vtt-creator-app
     ports:
-      - "8080:80"
+      - "80:80"
     restart: unless-stopped
 

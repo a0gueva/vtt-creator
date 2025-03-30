@@ -257,7 +257,7 @@ export default {
     max-height: 400px;
     min-width: 376px;
     justify-content: center;
-    background: linear-gradient(to right, #3d3d3d, #0a0a0af2);
+    // background: linear-gradient(to right, #3d3d3d, #0a0a0af2);
     // position: relative;
     // left: -340px;
     .group-scroll {
@@ -274,6 +274,7 @@ export default {
         margin: 0 15px 10px 10px;
         background: #ffffff;
         border-left: 4px solid #ff0101;
+        opacity: 1;
       }
       ul {
         margin: 0;
@@ -281,6 +282,7 @@ export default {
           padding: 3px;
         }
       }
+      opacity: .5;
       min-width: 360px;
       margin: 25px 15px 10px 10px;
       background: #ffffff;

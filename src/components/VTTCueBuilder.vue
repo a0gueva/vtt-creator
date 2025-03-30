@@ -11,7 +11,7 @@
         type="text"
         required
         :readonly="cue.saved"
-        placeholder="hh:mm:ss"
+        placeholder="hh:mm:ss.SSS"
         @input="inputHandler"
       />
     </div>
@@ -25,7 +25,7 @@
         type="text"
         required
         :readonly="cue.saved"
-        placeholder="hh:mm:ss"
+        placeholder="hh:mm:ss.SSS"
         @input="inputHandler"
       />
     </div>
@@ -77,7 +77,7 @@ export default {
     const vttError = ref(null);
     const vttType = ref("products");
     const pauseVid = ref(false);
-    const inputPattern = ref("(?:[01]\\d|2[0123]):(?:[012345]\\d):(?:[012345]\\d)");
+    const inputPattern = ref("^([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d\\.\\d{3}$");
 
     const vttStartRef = ref(null);
     const vttEndRef = ref(null);
@@ -99,17 +99,25 @@ export default {
       let endSecs = 0;
 
       if (start.checkValidity()) {
-        startSecs = vttStart.value.split(':').reduce((acc, time) => (60 * acc) + +time);
+        // const [h, m, s, ms] = vttStart.value.split(':').map(Number);
+        const [h, m, rest] = vttStart.value.split(':');
+        const [s, ms] = rest.split('.');
+        startSecs = (+h * 3600) + (+m * 60) + (+s) + (+ms / 1000);
+        // startSecs = h * 3600 + m * 60 + s + (ms / 1000);
       } else {
-        start.setCustomValidity("value does not match pattern hh:mm:ss");
+        start.setCustomValidity("value must match pattern hh:mm:ss.SSS");
         start.reportValidity();
         return;
       }
 
       if (end.checkValidity()) {
-        endSecs = vttEnd.value.split(':').reduce((acc, time) => (60 * acc) + +time);
+        // const [h, m, s, ms] = vttEnd.value.split(':').map(Number);
+        // endSecs = h * 3600 + m * 60 + s + (ms / 1000);
+        const [h, m, rest] = vttEnd.value.split(':');
+        const [s, ms] = rest.split('.');
+        endSecs = (+h * 3600) + (+m * 60) + (+s) + (+ms / 1000);
       } else {
-        end.setCustomValidity("value does not match pattern hh:mm:ss");
+        end.setCustomValidity("value must match pattern hh:mm:ss.SSS");
         end.reportValidity();
         return;
       }
@@ -165,11 +173,19 @@ export default {
       }
     };
 
+    // const formatCueTime = (timestamp) => {
+    //   const hours = Math.floor(timestamp / 3600);
+    //   const minutes = Math.floor((timestamp % 3600) / 60);
+    //   const seconds = Math.floor(timestamp % 60);
+    //   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    // };
+
     const formatCueTime = (timestamp) => {
       const hours = Math.floor(timestamp / 3600);
       const minutes = Math.floor((timestamp % 3600) / 60);
       const seconds = Math.floor(timestamp % 60);
-      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      const milliseconds = Math.round((timestamp % 1) * 1000);
+      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
     };
 
     onMounted(() => {

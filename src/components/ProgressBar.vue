@@ -5,32 +5,31 @@
         class="progress"
         ref="progressRef"
         @click.stop="pbClickEmitter($event, false)"
-        v-bind:style="{ backgroundImage: gradientString }">
+        v-bind:style="{ backgroundImage: gradientString }"
+      >
         <span
-          for
           v-for="cue in cueList"
           :key="cue.id"
-          v-bind:style="{ left: cue.leftPos }"
+          :style="{ left: cue.leftPos }"
           class="poi"
-        >
-        </span>
+        />
       </div>
       <div
         class="thumb"
-        v-bind:style="{ left: thumbPos }"
+        :style="{ left: thumbPos }"
         ref="thumbRef"
         @mousedown.self="startSlide"
-        >{{ thumbLabel }}
+      >
+        {{ thumbLabel }}
         <span class="cue-adder" @click.stop="pbClickEmitter($event, true)">+</span>
       </div>
-      <!-- canvas to hold positioned tick marks -->
       <canvas
         v-if="ticks"
         ref="progressTickersRef"
         class="tickers"
         width="100"
         height="35"
-      ></canvas>
+      />
     </div>
   </div>
 </template>
@@ -43,111 +42,65 @@ export default {
 
   props: {
     cueList: [],
-    pos: {
-      type: Number,
-    },
+    pos: Number,
     length: {
       type: Number,
       default: 60,
     },
-    label: {
-      type: String,
-    },
+    label: String,
   },
 
   emits: ["progress-bar-click", "progress-bar-move"],
 
   setup(props, { emit }) {
     const slidePos = ref(0);
-    const tickerPxWidth = ref(null);
-    const progressTickersRef = ref(null);
+    const scale = ref(1);
     const sliding = ref(false);
     const preSlideDelta = ref(0);
     const progressRef = ref(null);
-    const scale = ref(1);
     const thumbRef = ref(null);
     const progressWrapperRef = ref(null);
+    const progressTickersRef = ref(null);
+    const tickerPxWidth = ref(null);
 
-    console.log("PROPS :: ", props.length);
+    const computedProgress = computed(() => `${slidePos.value}px`);
 
-    // computed
-    const computedProgress = computed(() => {
-      return slidePos.value + "px";
-      // return props.pos + "px";
-    });
-
-    const ticks = computed(() => {
-      console.log("... ", props.length);
-      return Math.ceil(props.length / 5);
-    });
+    const ticks = computed(() => Math.ceil(props.length / 5));
 
     const thumbPos = computed(() => {
-      return slidePos.value - 20  < -20 ? -20 : slidePos.value - 20 + "px";
+      return slidePos.value - 20 < -20 ? "-20px" : `${slidePos.value - 20}px`;
     });
 
     const thumbLabel = computed(() => {
       return props.label != null
         ? props.label
-        : formatCueTime(Math.floor(slidePos.value / scale.value));
+        : formatCueTime(slidePos.value / scale.value);
     });
 
     const gradientString = computed(() => {
-      return `linear-gradient(to right, #4e92f7 ${computedProgress.value} , #b0b3b7 0px)`;
+      return `linear-gradient(to right, #4e92f7 ${computedProgress.value}, #b0b3b7 0px)`;
     });
-
-    // watchers
 
     watch(
       () => props.pos,
       () => {
-        // the slider position can be controlled by the parent if necessary
         if (!sliding.value) {
           slidePos.value = props.pos * scale.value;
-          if (slidePos.value < 20 || 
-            slidePos.value > progressWrapperRef.value.offsetWidth - 60) {
+          if (
+            slidePos.value < 20 ||
+            slidePos.value > progressWrapperRef.value.offsetWidth - 60
+          ) {
             nextTick(() => {
-              thumbRef.value.scrollIntoView({behavior: "smooth", 
-              block: "nearest", inline: "nearest"});
-            })
+              thumbRef.value.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+                inline: "nearest",
+              });
+            });
           }
         }
       }
     );
-
-    // methods
-    const thumbInView = (element, percentX, percentY) => {
-      var tolerance = 0.01; //needed because the rects returned by getBoundingClientRect provide the position up to 10 decimals
-      if (percentX == null) {
-        percentX = 100;
-      }
-      if (percentY == null) {
-        percentY = 100;
-      }
-
-      var elementRect = element.getBoundingClientRect();
-      var parentRects = [];
-
-      while (element.parentElement != null) {
-        parentRects.push(element.parentElement.getBoundingClientRect());
-        element = element.parentElement;
-      }
-
-      var visibleInAllParents = parentRects.every(function (parentRect) {
-        var visiblePixelX =
-          Math.min(elementRect.right, parentRect.right) -
-          Math.max(elementRect.left, parentRect.left);
-        var visiblePixelY =
-          Math.min(elementRect.bottom, parentRect.bottom) -
-          Math.max(elementRect.top, parentRect.top);
-        var visiblePercentageX = (visiblePixelX / elementRect.width) * 100;
-        var visiblePercentageY = (visiblePixelY / elementRect.height) * 100;
-        return (
-          visiblePercentageX + tolerance > percentX &&
-          visiblePercentageY + tolerance > percentY
-        );
-      });
-      return visibleInAllParents;
-    };
 
     const startSlide = (e) => {
       sliding.value = true;
@@ -174,24 +127,10 @@ export default {
       }
     };
 
-    const formatCueTime = (timestamp) => {
-      var hours = Math.floor(timestamp / 60 / 60);
-      // 37
-      var minutes = Math.floor(timestamp / 60) - hours * 60;
-      // 42
-      var seconds = timestamp % 60;
-      return (
-        minutes.toString().padStart(2, "0") +
-        ":" +
-        seconds.toString().padStart(2, "0")
-      );
-    };
-
     const pbClickEmitter = (e, addCue) => {
-      console.log("PAGE CLICK :: ", e.pageX, e.pageX, e.screenX);
       const rect = e.target.getBoundingClientRect();
-      const x = e.clientX - rect.left + 20; //x position within the element.
-      const y = e.clientY - rect.top; //y position within the element.
+      const x = e.clientX - rect.left + 20;
+      const y = e.clientY - rect.top;
       emit("progress-bar-click", {
         target: e.target,
         pos: {
@@ -199,8 +138,21 @@ export default {
           y,
         },
         scale,
-        addCue
+        addCue,
       });
+    };
+
+    const formatCueTime = (timestamp) => {
+      const hours = Math.floor(timestamp / 3600);
+      const minutes = Math.floor((timestamp % 3600) / 60);
+      const seconds = Math.floor(timestamp % 60);
+      const milliseconds = Math.round((timestamp % 1) * 1000);
+      return (
+        `${String(hours).padStart(2, "0")}:` +
+        `${String(minutes).padStart(2, "0")}:` +
+        `${String(seconds).padStart(2, "0")}.` +
+        `${String(milliseconds).padStart(3, "0")}`
+      );
     };
 
     const buildCanvasTicks = () => {
@@ -209,8 +161,6 @@ export default {
       const canvas = progressTickersRef.value;
       const ctx = canvas.getContext("2d");
       canvas.width = progressRef.value.offsetWidth;
-
-      console.log("CANVAS WIDTH :: ", canvas.width);
       ctx.translate(0.5, 0.5);
       ctx.font = "100 11px arial gray";
 
@@ -224,7 +174,6 @@ export default {
             ctx.fillText(c, i + 2, 30);
             ctx.drawImage(image, i, 0);
           }
-          let y = 0;
           if (c > 0 && c % 5 === 0) {
             const width = ctx.measureText(c).width;
             if (i + 2 < ctx.canvas.width) {
@@ -233,34 +182,19 @@ export default {
               ctx.fillStyle = "red";
               ctx.fillText(c, i - (width + 2), 30);
             }
-            ctx.drawImage(image, i - 1, y);
+            ctx.drawImage(image, i - 1, 0);
           } else {
-            ctx.drawImage(image, i - 1, y - 14);
+            ctx.drawImage(image, i - 1, -14);
           }
           ctx.stroke();
         }
       };
     };
 
-    // hooks
     onMounted(() => {
       progressRef.value.style.width = `${props.length * 15}px`;
       scale.value = progressRef.value.offsetWidth / props.length;
       tickerPxWidth.value = `${progressRef.value.offsetWidth / ticks.value}px`;
-      console.log(
-        "TickerWidth :: ",
-        tickerPxWidth.value,
-        scale.value,
-        ticks.value
-      );
-      // const observer = new IntersectionObserver(function(entries) {
-      //   if (!entries[0].isIntersecting) {
-      //     console.log("Element is hidden");
-      //     progressWrapperRef.value.scrollLeft += 10;
-      //   }
-      // }, { threshold: [1] });
-
-      // observer.observe(thumbRef.value);
       buildCanvasTicks();
     });
 
@@ -278,7 +212,6 @@ export default {
       thumbLabel,
       scale,
       ticks,
-      thumbInView,
       thumbRef,
       progressWrapperRef,
     };
@@ -353,7 +286,7 @@ export default {
       }
       position: relative;
       display: block;
-      width: 40px;
+      width: 80px;
       color: #4e91f7;
       font-size: 12px;
       font-weight: 800;
