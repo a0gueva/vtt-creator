@@ -87,6 +87,7 @@ const handlePBClick = (e) => {
 
 const handleProgress = (opts) => {
   videoPlayerRef.value.currentTime = opts.sliderPos / opts.scale.value;
+  // videoPlayerRef.value.currentTime = time;
 };
 
 const activateCue = (id) => {

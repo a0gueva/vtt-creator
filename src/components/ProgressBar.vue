@@ -269,7 +269,6 @@ export default {
 .progress-scroller {
   height: 100%;
   padding: 0 40px 0 20px;
-  margin: 0 20px 0 0;
   overflow-x: auto;
   -ms-overflow-style: none;  /* hide sroll Edge */
   scrollbar-width: none;  /* hide scroll Firefox */

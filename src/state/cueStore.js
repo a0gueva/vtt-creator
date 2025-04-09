@@ -18,6 +18,7 @@ export const useCueStore = defineStore('cueStore', {
       return state.vttObj.vttCues.find(c => c.id === state.selectedCueId);
     },
     getVTTObj: (state) => {
+      console.log("CALLING THE STORE !!!");
       return () => state.vttObj;
     }
   },

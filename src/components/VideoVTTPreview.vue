@@ -65,7 +65,7 @@ export default {
       const fetchPromises = [];
       if (collection.products) {
         collection.products.forEach((product) => {
-          const promise = fetch(`mocks/product/${product}.json`);
+          const promise = fetch(`http://localhost/mocks/product/${product}.json`);
           fetchPromises.push(promise);
         });
         Promise.all(fetchPromises)
@@ -109,11 +109,15 @@ export default {
         const { vttType, vttCues } = newVttObj;
         const track = video.addTextTrack(vttType);
         vttCues.forEach(cue => {
-          const newCue = new VTTCue(cue.startTime, cue.endTime, JSON.stringify(cue.text));
-          track.addCue(newCue);
+          if (cue.id !== null && cue.id.length !== 0) {
+            const newCue = new VTTCue(cue.startTime, cue.endTime, JSON.stringify(cue.text));
+            track.addCue(newCue);
+          }
         });
 
         track.oncuechange = (e) => {
+          console.log("TARGET :: ", e.target);
+          console.log("CUE STORE :: ", vttTrack.value);
           const meta = [...e.target.activeCues].map(t => t.text).join(" ");
           if (meta) {
             const data = JSON.parse(meta);
@@ -140,6 +144,27 @@ export default {
         };
       },
       { immediate: true, deep: true }
+    );
+
+    watch(() => cueStore.vttObj.vttCues,
+      (cues) => {
+        if (!cues) return;
+
+        // Create a set of current hashes from remaining cues
+        const validHashes = new Set();
+
+        cues.forEach(cue => {
+          const meta = JSON.stringify(cue.text);
+          const hash = md5(meta).toString();
+          validHashes.add(hash);
+        });
+
+        // Remove product collections that no longer have cues
+        productCollection.value = productCollection.value.filter(col =>
+          validHashes.has(col.hash)
+        );
+      },
+      { deep: true }
     );
 
     onMounted(() => {

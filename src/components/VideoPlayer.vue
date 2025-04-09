@@ -47,7 +47,7 @@
 /* eslint-disable no-undef */
 import { ref, onMounted } from "vue";
 import Preview from "./VideoVTTPreview.vue";
-import ProgressBar from "./ProgressBar.vue";
+import ProgressBar from "./ProgressBarHTML5.vue";
 
 defineProps({
   previewVid: Boolean,
@@ -65,7 +65,7 @@ const videoPlayerRef = ref(null);
 const progress2Ref = ref(null);
 const seconds = ref(0);
 const currentPlayTime = ref(0);
-const videoSrc = ref("https://assets.contentstack.io/v3/assets/bltab687eb09ed92451/blt0516a2ddf86d32f7/60256c5f5f9b2812764c3de9/levisSeasonalSample.mp4");
+const videoSrc = ref("https://videos.pexels.com/video-files/855563/855563-hd_1920_1080_24fps.mp4");
 
 const handleVideoUpload = (e) => {
   const file = e.target.files[0];

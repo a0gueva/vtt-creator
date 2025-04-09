@@ -8,5 +8,7 @@ services:
     container_name: vtt-creator-app
     ports:
       - "80:80"
+    volumes:
+      - ./:/app
     restart: unless-stopped
 
