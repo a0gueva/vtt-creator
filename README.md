@@ -35,4 +35,12 @@ A Vue 3 application for creating and editing WebVTT subtitle files.
 docker compose up --build
 
 ### Open in browser
-Visit: http://localhost:5173
+Visit: http://localhost
+
+### add cue pointers to the video at specified times
+![image](https://github.com/user-attachments/assets/35e84df3-cf28-4cc8-8873-95fc657585c3)
+
+### view the pointer on a running video
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/c96c47d4-1dcd-447b-913c-6ae524dde3a0" />
+
+
